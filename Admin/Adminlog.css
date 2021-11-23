@@ -1,0 +1,42 @@
+ .u-section-1 {
+  background-image: linear-gradient(to right, #478ac9, #adf6f2);
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 625px;
+}
+
+.u-section-1 .u-text-1 {
+  font-weight: 700;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2.25rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  width: 162px;
+  margin: 25px auto 0;
+}
+
+.u-section-1 .u-custom-html-1 {
+  min-height: 511px;
+  background-image: linear-gradient(to right, #478ac9, #adf6f2);
+  width: 369px;
+  margin: 25px auto;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-custom-html-1 {
+    height: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-text-1 {
+    font-size: 1.5rem;
+  }
+
+  .u-section-1 .u-custom-html-1 {
+    width: 358px;
+    margin-left: -9px;
+    margin-right: -9px;
+    margin-bottom: 31px;
+  }
+}
