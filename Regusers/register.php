@@ -25,7 +25,6 @@ session_start();
                 <?= $_SESSION['message'] ?>
             </div>
         <?php endif ?>  
-        <div class="row justify-content-center align-items-center">
             <form method="POST" action="sms.php" width="100%">
                 <div class="form-group">
                     <label for="username">Username</label>
@@ -39,7 +38,6 @@ session_start();
                 </div>
                 <input value="Register" type="submit" class="btn btn-primary btn-block">
             </form>
-        </div>
     </div>
 </body>
 </html>
