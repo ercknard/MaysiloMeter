@@ -10,6 +10,10 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        body{ font: 14px sans-serif; }
+        .wrapper{ width: 360px; padding: 20px; }
+    </style>
 </head>
 <body>
 <div class="wrapper">
@@ -25,10 +29,12 @@ session_start();
             <form method="POST" action="sms.php" width="100%">
                 <div class="form-group">
                     <label for="username">Username</label>
+                    <br>
                     <input type="text" name="username" id="username">
                 </div>
                 <div class="form-group">
-                    <label for="contact">Contact #</label>
+                    <label for="contact">Contact Number</label>
+                    <br>
                     <input type="text" name="contact" id="contact">
                 </div>
                 <input value="Register" type="submit" class="btn btn-primary btn-block">
