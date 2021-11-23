@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_username, $param_contact);
+            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_contact);
             
             // Set parameters
             $param_username = $username;
@@ -77,16 +77,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="mt-5">Create Record</h2>
-                    <p>Please fill this form and submit to add employee record to the database.</p>
+                    <p>Please fill this form and submit to add Maysilo users record to the database.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
-                            <label>username</label>
+                            <label>Username</label>
                             <input type="text" username="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                             <span class="invalid-feedback"><?php echo $username_err;?></span>
                         </div>
                         <div class="form-group">
-                            <label>contact</label>
-                            <textarea username="contact" class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>"><?php echo $contact; ?></textarea>
+                            <label>Contact</label>
+                            <input username="contact" class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>"><?php echo $contact; ?></input>
                             <span class="invalid-feedback"><?php echo $contact_err;?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
