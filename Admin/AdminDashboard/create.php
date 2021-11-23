@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate contact
     $input_contact = trim($_POST["contact"]);
     if(empty($input_contact)){
-        $contact_err = "Please enter the contact.";     
+        $contact_err = "Please enter the contact number.";     
     } elseif(!ctype_digit($input_contact)){
         $contact_err = "Please enter a positive integer value.";
     } else{
@@ -92,7 +92,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <span class="invalid-feedback"><?php echo $contact_err;?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>
+                        <a href="Dashboardini.php" class="btn btn-secondary ml-2">Cancel</a>
                     </form>
                 </div>
             </div>        
