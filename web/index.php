@@ -10,4 +10,6 @@
  * file that was distributed with this source code.
  */
 
-require_once 'controllers/base.php';
+require_once "controllers/base.php";
+
+?>
