@@ -2,7 +2,6 @@
 session_start();
 $code = getRandomCode();
 $username = $_POST['username'];
-$password =$_POST['password'];
 $contact = $_POST['contact'];
 
 // Generate sessions
@@ -29,7 +28,7 @@ sendSMS($contact, $code);
 function sendSMS($cnumber, $vcode){
     $curl = curl_init();
 
-    $message = "From Maysilo Flood O' Meter. This is your verification code: # ".$vcode;
+    $message = "From Maysilo Flood O' Meter. This is your 6 digit verification code:  ".$vcode;
     $num = $cnumber;
 
     curl_setopt_array($curl, array(
@@ -79,7 +78,7 @@ function sendSMS($cnumber, $vcode){
 <body>
 <div class="wrapper">
         <h2>SMS verification</h2>
-        <p>Kindly enter the otp number code to verify your phone number</p>
+        <p>Kindly enter the 6 digit otp code to verify your phone number</p>
            
             <form method="POST" action="check.php" width="100%">
                 <div class="form-group">
