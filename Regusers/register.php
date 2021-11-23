@@ -19,7 +19,7 @@ session_start();
 <div class="wrapper">
         <h2>User Registration</h2>
         <p>Please fill in your credentials to login.</p>
-        <p>If you wish to have flood alerts through sms kindly click register button and fill out the form.</p>
+        <p>If you wish to have flood alerts through sms kindly fill out the form.</p>
         <?php if(isset($_SESSION['message'])): ?>
             <div class="alert alert-<?= $_SESSION['message_type'] ?>" role="alert">
                 <?= $_SESSION['message'] ?>
