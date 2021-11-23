@@ -70,17 +70,24 @@ function sendSMS($cnumber, $vcode){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMS Verification</title>
+    <style>
+        body{ font: 14px sans-serif; }
+        .wrapper{ width: 360px; padding: 20px; }
+    </style>
 </head>
 <body>
-    <div class="container">
+<div class="wrapper">
+        <h2>SMS verification</h2>
+        <p>Kindly enter the otp number code to verify your phone number</p>
         <div class="row justify-content-center align-items-center">
            
             <form method="POST" action="check.php" width="100%">
                 <div class="form-group">
-                    <label for="code"></label>
-                    <input id="code" type="number" name="code">
+                    <label for="code"> OTP NUMBER: </label>
+                    <br>
+                    <input id="code" type="number" name="code" class="form-control">
                 </div>
-                <input type="submit" value="Verify" class="btn btn-success btn-block">
+                <input type="submit" value="Verify" class="btn btn-primary btn-block">
             </form>
         </div>
     </div>
