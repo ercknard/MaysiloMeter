@@ -79,7 +79,6 @@ function sendSMS($cnumber, $vcode){
 <div class="wrapper">
         <h2>SMS verification</h2>
         <p>Kindly enter the otp number code to verify your phone number</p>
-        <div class="row justify-content-center align-items-center">
            
             <form method="POST" action="check.php" width="100%">
                 <div class="form-group">
@@ -87,10 +86,9 @@ function sendSMS($cnumber, $vcode){
                     <br>
                     <input id="code" type="number" name="code" class="form-control">
                 </div>
+                <hr>
                 <input type="submit" value="Verify" class="btn btn-primary btn-block">
             </form>
-        </div>
-    </div>
-    
+    </div> 
 </body>
 </html>
