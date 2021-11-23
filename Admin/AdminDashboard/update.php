@@ -24,7 +24,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     // Validate contact
     $input_contact = trim($_POST["contact"]);
     if(empty($input_contact)){
-        $contact_err = "Please enter the contact amount.";     
+        $contact_err = "Please enter the contact number.";     
     } elseif(!ctype_digit($input_contact)){
         $contact_err = "Please enter a positive integer value.";
     } else{
@@ -131,7 +131,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="mt-5">Update Record</h2>
-                    <p>Please edit the input values and submit to update the employee record.</p>
+                    <p>Please edit the input values and submit to update the user record.</p>
                     <form action="<?php echo htmlspecialchars(basename($_SERVER['REQUEST_URI'])); ?>" method="post">
                         <div class="form-group">
                             <label>Username</label>
@@ -145,7 +145,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                         </div>
                         <input type="hidden" username="id" value="<?php echo $id; ?>"/>
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>
+                        <a href="Dashboardini.php" class="btn btn-secondary ml-2">Cancel</a>
                     </form>
                 </div>
             </div>        
