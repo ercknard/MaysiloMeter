@@ -29,12 +29,12 @@ session_start();
                 <div class="form-group">
                     <label for="username">Username</label>
                     <br>
-                    <input type="text" name="username" id="username">
+                    <input type="text" name="username" id="username" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="contact">Contact Number</label>
                     <br>
-                    <input type="text" name="contact" id="contact">
+                    <input type="text" name="contact" id="contact" class="form-control">
                 </div>
                 <input value="Register" type="submit" class="btn btn-primary btn-block">
             </form>
