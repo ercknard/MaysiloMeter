@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate contact
     $input_contact = trim($_POST["contact"]);
     if(empty($input_contact)){
-        $contact_err = "Please enter the contact amount.";     
+        $contact_err = "Please enter the contact.";     
     } elseif(!ctype_digit($input_contact)){
         $contact_err = "Please enter a positive integer value.";
     } else{
@@ -35,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_username, $param_contact);
+            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_contact);
             
             // Set parameters
             $param_username = $username;
@@ -87,7 +87,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <span class="invalid-feedback"><?php echo $username_err;?></span>
                         </div>
                         <div class="form-group">
-                            <label>contact</label>
+                            <label>Contact</label>
                             <input type="text" username="contact" class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>">
                             <span class="invalid-feedback"><?php echo $contact_err;?></span>
                         </div>
