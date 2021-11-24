@@ -57,6 +57,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                         echo "<th>Name</th>";
                                         echo "<th>Contact</th>";
                                         echo "<th>Time Created</th>";
+                                        echo "<th>Option</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
