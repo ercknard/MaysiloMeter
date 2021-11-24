@@ -20,23 +20,11 @@ $username_err = $contact_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate username
     $input_username = trim($_POST["username"]);
-    if(empty($input_username)){
-        $username_err = "Please enter a username.";
-    } elseif(!filter_var($input_username, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
-        $username_err = "Please enter a valid username.";
-    } else{
-        $username = $input_username;
-    }
+    
     
     // Validate contact
     $input_contact = trim($_POST["contact"]);
-    if(empty($input_contact)){
-        $contact_err = "Please enter the contact number.";     
-    } elseif(!ctype_digit($input_contact)){
-        $contact_err = "Please enter a positive integer value.";
-    } else{
-        $contact = $input_contact;
-    }
+    
     
     // Check input errors before inserting in database
     if(empty($username_err) && empty($contact_err)){
