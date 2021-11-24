@@ -18,14 +18,13 @@
 .u-section-1 .u-custom-html-1 {
   min-height: 511px;
   background-image: linear-gradient(to right, #478ac9, #adf6f2);
-  width: 1041px;
+  width: 901px;
   margin: 25px auto;
 }
 
 @media (max-width: 1199px) {
   .u-section-1 .u-custom-html-1 {
     height: auto;
-    width: 940px;
   }
 }
 
