@@ -141,6 +141,31 @@
         <h2 class="u-align-center-md u-align-center-sm u-align-center-xs u-custom-font u-font-titillium-web u-text u-text-white u-text-1">Interactive Satellite viewer by PAG-ASA : Philippine Atmospheric, Geophysical and Astronomical Services Administration. </h2>
         <h2 class="u-align-center-md u-align-center-sm u-align-center-xs u-custom-font u-font-titillium-web u-text u-text-white u-text-2" data-animation-name="flash" data-animation-duration="1000" data-animation-delay="0" data-animation-direction="">Note: If the interactive viewer does not load, kindly click the button below and It will redirect you to PAG-ASA viewer.</h2>
         <a href="http://121.58.193.173:8080/" class="u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-body-alt-color u-btn-1" target="_blank">View</a>
+        <div class="u-custom-php u-custom-php-1" data-custom-php="<!--custom_php--><? php 
+// Allow from any origin
+if(isset($_SERVER[&quot;HTTP_ORIGIN&quot;]))
+{
+    // You can decide if the origin in $_SERVER['HTTP_ORIGIN'] is something you want to allow, or as we do here, just allow all
+    header(&quot;Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}&quot;);
+}
+else
+{
+    //No HTTP_ORIGIN set, so we allow any. You can disallow if needed here
+    header(&quot;Access-Control-Allow-Origin: *&quot;);
+}
+header(&quot;Access-Control-Allow-Credentials: true&quot;);
+header(&quot;Access-Control-Max-Age: 600&quot;);    // cache for 10 minutes
+if($_SERVER[&quot;REQUEST_METHOD&quot;] == &quot;OPTIONS&quot;)
+{
+    if (isset($_SERVER[&quot;HTTP_ACCESS_CONTROL_REQUEST_METHOD&quot;]))
+        header(&quot;Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE, PUT&quot;); //Make sure you remove those you do not want to support
+    if (isset($_SERVER[&quot;HTTP_ACCESS_CONTROL_REQUEST_HEADERS&quot;]))
+        header(&quot;Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}&quot;);
+    //Just exit with 200 OK with the above headers for OPTIONS method
+    exit(0);
+}
+//From here, handle the request as it is ok
+?><!--/custom_php-->"></div>
       </div>
     </section>
     
