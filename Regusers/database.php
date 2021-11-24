@@ -13,9 +13,6 @@ if ($conn->connect_error) {
 }
 echo "Connected successfully";
 
-$sql = "ALTER TABLE tblusers
-MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6";
-
 if($conn->query($sql) === TRUE) {
   echo "Table successfully updated";
 } else {
