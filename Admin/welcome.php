@@ -27,11 +27,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <br>
         <hr>
         <br>
-        <a href="reset-password.php" class="btn btn-primary btdas">Reset Your Password</a>
+        <a href="register.php" target="_blank" class="btn pull-left">Add new Admin</a><a href="reset-password.php" class="btn btn-primary pull-right">Reset Your Password</a>
         <br>
         <hr>
         <br>
-        <a href="logout.php" class="btn btn-danger ml-3">Sign Out</a>
+        <a href="logout.php" class="btn btn-danger">Sign Out</a>
     </p>
     <style>
     a.btdas{
