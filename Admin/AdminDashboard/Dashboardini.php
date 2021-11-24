@@ -39,7 +39,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <div class="row">
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left">Registered User Details</h2>
+                        <h2 class="pull-left">User Details</h2>
                         <a href="logout.php" class="btn btn-danger">Sign Out</a><a href="create.php" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Add New User</a>
                     </div>
                     <?php
