@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Announcements</title>
     <link rel="stylesheet" href="../nicepage.css" media="screen">
