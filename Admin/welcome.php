@@ -23,7 +23,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>
     <br> Welcome Admin</h1>
     <p>
-        <a href="https://maysilometer.herokuapp.com/Admin/AdminDashboard/Dashboard.html" target="_blank" class="btn btn-primary pull-left ml-2">Admin Dashboard</a><a href="register.php" class="btn btn-primary pull-center">Add new Admin</a><a href="reset-password.php" class="btn btn-primary pull-right mr-2">Reset Password</a>
+        <a href="https://maysilometer.herokuapp.com/Admin/AdminDashboard/Dashboard.html" target="_blank" class="btn btn-primary pull-left ml-2">Admin Dashboard</a><a href="register.php" class="btn btn-primary pull-center mr-2">Add new Admin</a><a href="reset-password.php" class="btn btn-primary pull-right">Reset Password</a>
         <br>
         <hr>
         <br>
