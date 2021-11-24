@@ -56,6 +56,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                         echo "<th>#</th>";
                                         echo "<th>Name</th>";
                                         echo "<th>Contact</th>";
+                                        echo "<th>Time Created</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
@@ -64,6 +65,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                         echo "<td>" . $row['id'] . "</td>";
                                         echo "<td>" . $row['username'] . "</td>";
                                         echo "<td>" . $row['contact'] . "</td>";
+                                        echo "<td>" . $row['created_at'] . "</td>";
                                         echo "<td>";
                                             echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
                                             echo '<a href="update.php?id='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';

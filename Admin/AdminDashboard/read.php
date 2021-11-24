@@ -36,6 +36,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                 // Retrieve individual field value
                 $username = $row["username"];
                 $contact = $row["contact"];
+                $created_at = $row["created_at"];
             } else{
                 // URL doesn't contain valid id parameter. Redirect to error page
                 header("location: error.php");
@@ -85,6 +86,10 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                     <div class="form-group">
                         <label>Contact</label>
                         <p><b><?php echo $row["contact"]; ?></b></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Time Created</label>
+                        <p><b><?php echo $row["created_at"]; ?></b></p>
                     </div>
                     <p><a href="Dashboardini.php" class="btn btn-primary">Back</a></p>
                 </div>
