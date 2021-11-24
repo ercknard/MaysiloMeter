@@ -24,7 +24,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <br> Welcome Admin</h1>
     <p>
         <a href="https://maysilometer.herokuapp.com/Admin/AdminDashboard/Dashboard.html" target="_blank" class="btn btn-primary">Admin Dashboard</a><br> <hr> <br>
-        <a href="register.php" class="btn btn-primary pull-left ml-3">Add new Admin</a><a href="reset-password.php" class="btn btn-primary pull-right">Reset Password</a>
+        <a href="register.php" class="btn btn-primary pull-left mr-3">Add new Admin</a><a href="reset-password.php" class="btn btn-primary pull-right">Reset Password</a>
         <br>
         <hr>
         <br>
