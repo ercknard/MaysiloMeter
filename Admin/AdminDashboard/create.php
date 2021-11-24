@@ -20,11 +20,23 @@ $username_err = $contact_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate username
     $input_username = trim($_POST["username"]);
-    
+    if(empty($input_username)){
+        $username_err = "Please enter a username.";
+    } elseif(!filter_var($input_username, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
+        $username_err = "Please enter a valid username.";
+    } else{
+        $username = $input_username;
+    }
     
     // Validate contact
     $input_contact = trim($_POST["contact"]);
-    
+    if(empty($input_contact)){
+        $contact_err = "Please enter the contact number.";     
+    } elseif(!ctype_digit($input_contact)){
+        $contact_err = "Please enter a positive integer value.";
+    } else{
+        $contact = $input_contact;
+    }
     
     // Check input errors before inserting in database
     if(empty($username_err) && empty($contact_err)){
@@ -81,12 +93,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
                             <label>Username</label>
-                            <input type="text" username="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                            <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                             <span class="invalid-feedback"><?php echo $username_err;?></span>
                         </div>
                         <div class="form-group">
                             <label>Contact</label>
-                            <input type="text" username="contact" class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>">
+                            <input type="text" name="contact" class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>">
                             <span class="invalid-feedback"><?php echo $contact_err;?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
