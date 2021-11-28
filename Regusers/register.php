@@ -17,6 +17,9 @@ session_start();
 </head>
 <body>
 <div class="wrapper">
+<img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
+
+<hr color="lightblue" width="100%">
         <h2>User Registration</h2>
         <p>Please fill in your credentials to login.</p>
         <p>If you wish to have flood alerts through sms kindly fill out the form.</p>
