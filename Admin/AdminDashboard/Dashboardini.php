@@ -34,12 +34,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </script>
 </head>
 <body>
-<h3 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> </h3>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
+                    <h4>Admin User : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> </h4>
                         <h2 class="pull-left">User Details       </h2>
                         <a href="../logout.php" class="btn btn-danger pull-right ml-2">Sign Out</a><a href="../welcome.php" class="btn btn-primary pull-right ml-2">Back</a> <a href="create.php" class="btn btn-primary pull-right"><i class="fa fa-plus"></i>Add New User</a>
                     </div>
