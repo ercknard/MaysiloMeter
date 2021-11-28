@@ -34,6 +34,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </script>
 </head>
 <body>
+<h3 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> </h3>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
