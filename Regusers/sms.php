@@ -77,6 +77,9 @@ function sendSMS($cnumber, $vcode){
 </head>
 <body>
 <div class="wrapper">
+<img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
+
+<hr color="lightblue" width="100%">
         <h2>SMS verification</h2>
         <p>Kindly enter the 6 digit otp code to verify your phone number</p>
            
