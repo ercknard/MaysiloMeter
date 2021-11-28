@@ -3,7 +3,7 @@
 }
 
 .u-section-1 .u-sheet-1 {
-  min-height: 641px;
+  min-height: 698px;
 }
 
 .u-section-1 .u-text-1 {
@@ -16,11 +16,11 @@
 }
 
 .u-section-1 .u-custom-html-1 {
-  min-height: 527px;
+  min-height: 589px;
   background-image: linear-gradient(to right, #478ac9, #adf6f2);
   height: auto;
   width: 385px;
-  margin: 25px auto;
+  margin: 21px auto 25px;
 }
 
 @media (max-width: 575px) {
