@@ -108,8 +108,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <div class="wrapper">
+    <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
+
+<hr color="lightblue" width="100%">
         <h2>Sign Up</h2>
-        <p>Please fill this form to create an account.</p>
+        <p>Please fill this form to create an ADMIN account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">
                 <label>Username</label>
