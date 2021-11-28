@@ -83,6 +83,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <div class="wrapper">
+    <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
+
+<hr color="lightblue" width="100%">
         <h2>Reset Password</h2>
         <p>Please fill out this form to reset your password.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 

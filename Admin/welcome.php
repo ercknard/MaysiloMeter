@@ -22,13 +22,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
 <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
 
-<hr color="lightblue" width="100%">
-    <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>
-    <br> Welcome Admin</h1>
+<hr color="lightblue" width="50%">
+    <h1 class="my-5">Welcome Admin, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>
+    <p>Click one of option below to continue. <?php echo htmlspecialchars($_SESSION["username"]); ?></p>
     <p>
-        <a href="AdminDashboard/Dashboardini.php" class="btn btn-primary">Admin Dashboard</a> <hr>
+        <a href="AdminDashboard/Dashboardini.php" class="btn btn-primary">Admin Dashboard</a>
+        <hr color="lightblue" width="50%">
         <a href="register.php" class="btn btn-primary pull-left mr-3">Add new Admin</a><a href="reset-password.php" class="btn btn-primary pull-right">Reset Password</a>
-        <hr>
+        <hr color="lightblue" width="50%">
         <a href="logout.php" class="btn btn-danger">Sign Out</a>
     </p>
     <style>
