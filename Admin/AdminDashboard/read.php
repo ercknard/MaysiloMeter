@@ -78,6 +78,9 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
+                <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
+
+<hr color="lightblue" width="100%">
                     <h1 class="mt-5 mb-3">View Record</h1>
                     <div class="form-group">
                         <label>Userame</label>
