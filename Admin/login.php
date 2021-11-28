@@ -101,6 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
     <div class="wrapper">
+    <img src="/images/floodlogo.png" width="40px" height="40px">
         <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
 
