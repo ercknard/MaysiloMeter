@@ -20,8 +20,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         .wrapper{
-            width: 600px;
-            margin: 0 auto;
+            width: 850px;
+            margin-left: 250px;
         }
         table tr td:last-child{
             width: 120px;
@@ -88,8 +88,8 @@ body {
 <a href="../logout.php" class="btn btn-danger pull-center ml-4 mr-4"><i class="fa fa-user-o"></i> Sign Out</a>
 </div>
 
+<img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px" margin="auto">
     <div class="wrapper">
-    <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
