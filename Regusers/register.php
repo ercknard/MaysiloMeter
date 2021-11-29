@@ -40,6 +40,9 @@ session_start();
                     <input type="text" name="contact" id="contact" class="form-control">
                 </div>
                 <input value="Register" type="submit" class="btn btn-primary btn-block">
+
+                <p>If the registration fails. Submit a request to ADMIN by click the button below.</p>
+                <a href="../request.php" class="btn btn-secondary ml-2">REQUEST</a>
             </form>
     </div>
 </body>
