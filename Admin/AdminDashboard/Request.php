@@ -21,7 +21,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <style>
         .wrapper{
             width: 800px;
-            margin: 0 auto;
+            margin-left: 200px;
         }
         table tr td:last-child{
             width: 120px;
