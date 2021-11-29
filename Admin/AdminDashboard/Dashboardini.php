@@ -77,7 +77,7 @@ body {
 <body>
 
 <div class="sidenav">
-<a href="Dashboardini.php">User Details</a>
+<a class="btn-danger" href="Dashboardini.php">User Details</a>
 <a href="Request.php">Request</a>
 <a href="Diagrams.php">Diagrams</a>
 <a href="Tables.php">Tables</a>
