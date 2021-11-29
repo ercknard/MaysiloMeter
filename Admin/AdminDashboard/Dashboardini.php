@@ -47,7 +47,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #009dff;
+  background-color: #59bfff;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -88,8 +88,8 @@ body {
 <a href="../logout.php" class="btn btn-danger pull-center ml-4 mr-4"><i class="fa fa-user-o"></i> Sign Out</a>
 </div>
 
-<img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px" margin="auto">
     <div class="wrapper">
+    <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
