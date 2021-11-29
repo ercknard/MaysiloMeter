@@ -47,7 +47,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #59bfff;
+  background-color: #0da2ff;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -69,7 +69,7 @@ body {
 }
 
 .highlight {
-    background-color: blue;
+    background-color: #8cd3ff;
 }
 
 @media screen and (max-height: 450px) {
