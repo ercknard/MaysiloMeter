@@ -106,7 +106,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <span class="invalid-feedback"><?php echo $comments_err;?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="Dashboardini.php" class="btn btn-secondary ml-2">Cancel</a>
+                        <a href="../register.php" class="btn btn-secondary ml-2">Cancel</a>
                     </form>
                 </div>
             </div>        
