@@ -24,14 +24,12 @@
 }
 
 @media (max-width: 1199px) {
-  .u-section-1 .u-custom-html-1 {
-    width: 677px;
+  .u-section-1 .u-sheet-1 {
+    min-height: 833px;
   }
-}
 
-@media (max-width: 767px) {
   .u-section-1 .u-custom-html-1 {
-    width: 540px;
+    min-height: 719px;
   }
 }
 
