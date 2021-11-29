@@ -41,7 +41,10 @@ session_start();
                 </div>
                 <input value="Register" type="submit" class="btn btn-primary btn-block">
 
-                <p>If the registration fails. Submit a request to ADMIN by click the button below.</p>
+                <hr color="lightblue" width="100%">
+
+                <p>If the registration fails. Submit a request to ADMIN by click the button below. <br> <b> NOTE : All inputs are confidential. </b></p>
+
                 <a href="../request.php" class="btn btn-secondary ml-2">REQUEST</a>
             </form>
     </div>
