@@ -68,6 +68,10 @@ body {
   margin-left: 200px; /* Same as the width of the sidenav */
 }
 
+.sidenav.highlight {
+    color: red;
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -77,7 +81,7 @@ body {
 <body>
 
 <div class="sidenav">
-<a class="btn-danger" href="Dashboardini.php">User Details</a>
+<a class="highlight" href="Dashboardini.php">User Details</a>
 <a href="Request.php">Request</a>
 <a href="Diagrams.php">Diagrams</a>
 <a href="Tables.php">Tables</a>
