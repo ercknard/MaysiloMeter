@@ -56,7 +56,7 @@ body {
   padding: 6px 6px 6px 32px;
   text-decoration: none;
   font-size: 20px;
-  color: #818181;
+  color: #ffffff;
   display: block;
 }
 
@@ -81,7 +81,7 @@ body {
 <a href="Request.php">Request</a>
 <a href="Diagrams.php">Diagrams</a>
 <a href="Tables.php">Tables</a>
-<a href="../logout.php" class="btn btn-danger pull-center ml-2 mr-2">Sign Out</a>
+<a href="../logout.php" class="btn btn-danger pull-center ml-4 mr-4">Sign Out</a>
 </div>
 
     <div class="wrapper">
