@@ -68,7 +68,7 @@ body {
   margin-left: 200px; /* Same as the width of the sidenav */
 }
 
-.sidenav.highlight {
+.highlight {
     color: red;
 }
 
