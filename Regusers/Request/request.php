@@ -28,6 +28,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         $contact = $input_contact;
     }
+
+        // Validate contact
+        $input_comments = trim($_POST["comments"]);
+        $comments = $input_comments;
     
     // Check input errors before inserting in database
     if(empty($username_err) && empty($contact_err)){
@@ -46,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Records created successfully. Redirect to landing page
-                header("location: ../../../register.php");
+                header("location: ../register.php");
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
