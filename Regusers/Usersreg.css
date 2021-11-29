@@ -19,8 +19,14 @@
   min-height: 667px;
   background-image: linear-gradient(to right, #478ac9, #adf6f2);
   height: auto;
-  width: 677px;
+  width: 443px;
   margin: 25px auto;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-custom-html-1 {
+    width: 677px;
+  }
 }
 
 @media (max-width: 767px) {
