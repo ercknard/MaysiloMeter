@@ -47,7 +47,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: blue;
+  background-color: #009dff;
   overflow-x: hidden;
   padding-top: 20px;
 }
