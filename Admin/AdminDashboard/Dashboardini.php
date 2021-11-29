@@ -81,7 +81,7 @@ body {
 <a href="Request.php">Request</a>
 <a href="Diagrams.php">Diagrams</a>
 <a href="Tables.php">Tables</a>
-<a href="../logout.php" class="btn btn-danger pull-center">Sign Out</a>
+<a href="../logout.php" class="btn btn-danger pull-center ml-2 mr-2">Sign Out</a>
 </div>
 
     <div class="wrapper">
