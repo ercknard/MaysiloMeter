@@ -77,13 +77,11 @@ body {
 <body>
 
 <div class="sidenav">
-  <a href="delete.php">Request</a>
-  <a href="#">Tables</a>
-</div>
-
-<div class="main">
-  <h2>Sidenav Example</h2>
-  <p>This sidenav is always shown.</p>
+<a href="Dashboardini.php">Records</a>
+<a href="Request.php">Request</a>
+<a href="Diagrams.php">Diagrams</a>
+<a href="Tables.php">Tables</a>
+<a href="../logout.php" class="btn btn-danger pull-right ml-2">Sign Out</a>
 </div>
 
     <div class="wrapper">
@@ -95,7 +93,7 @@ body {
                     <h4>Admin User : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> </h4>
                     <hr color="lightblue" width="100%">
                         <h2 class="pull-left">User Details       </h2>
-                        <a href="../logout.php" class="btn btn-danger pull-right ml-2">Sign Out</a><a href="../welcome.php" class="btn btn-primary pull-right ml-2">Back</a> <a href="create.php" class="btn btn-primary pull-right"><i class="fa fa-plus"></i>Add New User</a>
+                        <a href="../welcome.php" class="btn btn-primary pull-right ml-2">Back</a> <a href="create.php" class="btn btn-primary pull-right"><i class="fa fa-plus"></i>Add New User</a>
                     </div>
                     <?php
                     // Include config file
