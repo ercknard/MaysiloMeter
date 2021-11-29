@@ -20,7 +20,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         .wrapper{
-            width: 900px;
+            width: 850px;
             margin-left: 250px;
         }
         table tr td:last-child{
@@ -127,7 +127,7 @@ body {
                                         echo "<td>" . $row['comments'] . "</td>";
                                         echo "<td>" . $row['created_at'] . "</td>";
                                         echo "<td>";
-                                            echo '<a href="update.php?id='. $row['id'] .'" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
+                                            echo '<a href="update.php?id='. $row['id'] .'" title="Push to users" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
                                         echo "</td>";
                                     echo "</tr>";
                                 }
