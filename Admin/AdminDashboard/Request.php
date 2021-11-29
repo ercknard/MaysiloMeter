@@ -81,8 +81,8 @@ body {
 <body>
 
 <div class="sidenav">
-<a class="highlight" href="Dashboardini.php">User Details</a>
-<a href="Request.php">Request</a>
+<a href="Dashboardini.php">User Details</a>
+<a class="highlight" href="Request.php">Request</a>
 <a href="Diagrams.php">Diagrams</a>
 <a href="Tables.php">Tables</a>
 <a href="../logout.php" class="btn btn-danger pull-center ml-4 mr-4"><i class="fa fa-user-o"></i> Sign Out</a>
@@ -96,7 +96,7 @@ body {
                     <div class="mt-5 mb-3 clearfix">
                     <h4>Admin User : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> </h4>
                     <hr color="lightblue" width="100%">
-                        <h2 class="pull-left">User Details       </h2>
+                        <h2 class="pull-left">Request List :     </h2>
                         <a href="../welcome.php" class="btn btn-primary pull-right ml-2">Back</a> <a href="create.php" class="btn btn-primary pull-right"><i class="fa fa-plus"></i>Add New User</a>
                     </div>
                     <?php
@@ -104,7 +104,7 @@ body {
                     require_once "config.php";
                     
                     // Attempt select query execution
-                    $sql = "SELECT * FROM tblusers";
+                    $sql = "SELECT * FROM request";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo '<table class="table table-bordered table-striped">';
@@ -113,8 +113,9 @@ body {
                                         echo "<th>#</th>";
                                         echo "<th>Name</th>";
                                         echo "<th>Contact</th>";
+                                        echo "<th>Comment</th>";
                                         echo "<th>Time Created</th>";
-                                        echo "<th>Option</th>";
+                                        echo "<th>Push to Users</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
@@ -123,11 +124,10 @@ body {
                                         echo "<td>" . $row['id'] . "</td>";
                                         echo "<td>" . $row['username'] . "</td>";
                                         echo "<td>" . $row['contact'] . "</td>";
+                                        echo "<td>" . $row['comment'] . "</td>";
                                         echo "<td>" . $row['created_at'] . "</td>";
                                         echo "<td>";
-                                            echo '<a href="read.php?id='. $row['id'] .'" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
-                                            echo '<a href="update.php?id='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                            echo '<a href="delete.php?id='. $row['id'] .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                            echo '<a href="update.php?id='. $row['id'] .'" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
                                         echo "</td>";
                                     echo "</tr>";
                                 }
