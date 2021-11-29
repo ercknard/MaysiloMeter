@@ -45,7 +45,7 @@ session_start();
 
                 <p>If the registration fails. Submit a request to ADMIN by click the button below. <br> <b> NOTE : All inputs are confidential. </b></p>
 
-                <a href="../request.php" class="btn btn-secondary ml-2">REQUEST</a>
+                <a href="Request/request.php" class="btn btn-secondary ml-2">REQUEST</a>
             </form>
     </div>
 </body>
