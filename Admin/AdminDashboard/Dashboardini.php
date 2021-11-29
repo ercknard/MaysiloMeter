@@ -68,8 +68,8 @@ body {
   margin-left: 200px; /* Same as the width of the sidenav */
 }
 
-.sidenav.a.highlight {
-    color: red;
+.highlight {
+    background-color: red;
 }
 
 @media screen and (max-height: 450px) {
