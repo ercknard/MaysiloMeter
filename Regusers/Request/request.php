@@ -98,7 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         </div>
                         <div class="form-group">
                             <label>comments</label>
-                            <textarea type="text" name="comments" class="form-control <?php echo (!empty($comments_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $comments; ?>">
+                            <textarea type="text" name="comments" class="form-control <?php echo (!empty($comments_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $comments; ?>"></textarea>
                             <span class="invalid-feedback"><?php echo $comments_err;?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
