@@ -158,6 +158,7 @@ body {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
+                <div class="mt-5 mb-3 clearfix">
                 <h4>Admin User : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>, </h4>
 
 <hr color="lightblue" width="100%">
