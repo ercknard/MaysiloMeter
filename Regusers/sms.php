@@ -75,13 +75,6 @@ function sendSMS($cnumber, $vcode){
 <hr color="lightblue" width="100%">
         <h2>SMS verification</h2>
         <p>Kindly enter the 6 digit otp code to verify your phone number</p>
-
-        <?php if(isset($_SESSION['message'])): ?>
-            <div class="alert alert-<?= $_SESSION['message_type'] ?>" role="alert">
-                <?= $_SESSION['message'] ?>
-            </div>
-        <?php endif ?>  
-           
             <form method="POST" action="check.php" width="100%">
                 <div class="form-group">
                     <label for="code"> OTP NUMBER: </label>

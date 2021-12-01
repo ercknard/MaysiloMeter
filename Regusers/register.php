@@ -20,6 +20,14 @@ session_start();
 <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
 
 <hr color="lightblue" width="100%">
+
+<?php if(isset($_SESSION['message'])): ?>
+            <div class="alert alert-<?= $_SESSION['message_type'] ?>" role="alert">
+                <?= $_SESSION['message'] ?>
+            </div>
+        <?php endif ?>  
+           
+        
         <h2>User Registration</h2>
         <p>If you wish to have flood alerts through sms kindly fill out the form.</p>
             <form method="POST" action="sms.php" width="100%">
