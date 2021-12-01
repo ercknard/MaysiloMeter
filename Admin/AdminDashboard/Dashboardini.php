@@ -93,12 +93,11 @@ body {
 <a href="Diagrams.php">Diagrams</a>
 <a href="Tables.php">Tables</a>
 <hr color="white">
-<p>Admin User : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> ,</p>
+<p>Admin User : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>,</p>
 <a href="../logout.php" class="btn btn-danger pull-center ml-4 mr-4"><i class="fa fa-user-o"></i> Sign Out</a>
 </div>
 
     <div class="wrapper">
-    <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
