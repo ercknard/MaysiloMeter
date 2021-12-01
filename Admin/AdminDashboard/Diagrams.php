@@ -104,7 +104,7 @@ body {
                     <div class="mt-5 mb-3 clearfix">
                     <h4>Admin User : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>, </h4>
                     <hr color="lightblue" width="100%">
-                        <h2 class="pull-left">Announcements      </h2>
+                        <h2 class="pull-left">Diagrams      </h2>
                         <a href="../welcome.php" class="btn btn-primary pull-right ml-2">Back</a>
                     </div>
 
