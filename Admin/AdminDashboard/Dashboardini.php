@@ -72,6 +72,10 @@ body {
     background-color: #8cd3ff;
 }
 
+.sidenav p{
+    text-align: center;
+    color: #ffffff;
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -89,7 +93,7 @@ body {
 <a href="Diagrams.php">Diagrams</a>
 <a href="Tables.php">Tables</a>
 <hr color="white">
-<p>Admin User : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> </p>
+<p>Admin User : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> ,</p>
 <a href="../logout.php" class="btn btn-danger pull-center ml-4 mr-4"><i class="fa fa-user-o"></i> Sign Out</a>
 </div>
 
