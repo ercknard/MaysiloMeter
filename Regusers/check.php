@@ -18,7 +18,7 @@ $inputtedCode = $_POST['code'];
 $correctCode = $_SESSION['otp'];
 $username = $_SESSION['username'];
 $contact = $_SESSION['contact'];
-$pssword = $_POST['password'];
+$password = $_SESSION['password'];
 
 if($inputtedCode == $correctCode){
     $sql = "INSERT INTO tblusers (username, contact, password)
