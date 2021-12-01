@@ -39,6 +39,11 @@ session_start();
                     <br>
                     <input type="text" name="contact" id="contact" class="form-control">
                 </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <br>
+                    <input type="password" name="password" id="password" class="form-control">
+                </div>
                 <input value="Register" type="submit" class="btn btn-primary btn-block">
 
                 <hr color="lightblue" width="100%">

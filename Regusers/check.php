@@ -18,10 +18,11 @@ $inputtedCode = $_POST['code'];
 $correctCode = $_SESSION['otp'];
 $username = $_SESSION['username'];
 $contact = $_SESSION['contact'];
+$pssword = $_POST['password'];
 
 if($inputtedCode == $correctCode){
-    $sql = "INSERT INTO tblusers (username, contact)
-    VALUES ('".$username."','".$contact."')";
+    $sql = "INSERT INTO tblusers (username, contact, password)
+    VALUES ('".$username."','".$contact."','".$password."')";
     
     if ($conn->query($sql) === TRUE) {
         $_SESSION['message_type'] = 'success';

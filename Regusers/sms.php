@@ -3,11 +3,13 @@ session_start();
 $code = getRandomCode();
 $username = $_POST['username'];
 $contact = $_POST['contact'];
+$pssword = $_POST['password'];
 
 // Generate sessions
 $_SESSION['otp'] = $code;
 $_SESSION['username'] = $username;
 $_SESSION['contact'] = $contact;
+$_SESSION['password'] = $password;
 
 // Randomizer
 function getRandomCode() {
