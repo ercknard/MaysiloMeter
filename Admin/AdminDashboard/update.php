@@ -192,6 +192,7 @@ body {
 
 <div class="sidenav">
 <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
+<hr color="white">
 <a class="highlight" href="Dashboardini.php">User Details</a>
 <a href="Request.php">Request</a>
 <a href="Diagrams.php">Diagrams</a>
