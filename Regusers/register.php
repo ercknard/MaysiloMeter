@@ -21,7 +21,6 @@ session_start();
 
 <hr color="lightblue" width="100%">
         <h2>User Registration</h2>
-        <p>Please fill in your credentials to login.</p>
         <p>If you wish to have flood alerts through sms kindly fill out the form.</p>
         <?php if(isset($_SESSION['message'])): ?>
             <div class="alert alert-<?= $_SESSION['message_type'] ?>" role="alert">
