@@ -47,7 +47,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #0da2ff;
+  background-color: black;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -85,9 +85,11 @@ body {
 <hr color="white">
 <a class="highlight" href="Dashboardini.php">User Details</a>
 <a href="Request.php">Request</a>
+<a href="Announcements.php">Announcements</a>
 <a href="Diagrams.php">Diagrams</a>
 <a href="Tables.php">Tables</a>
-<a href="../logout.php" class="btn btn-danger pull-center ml-4 mr-4 card-footer"><i class="fa fa-user-o"></i> Sign Out</a>
+<hr color="white">
+<a href="../logout.php" class="btn btn-danger pull-center ml-4 mr-4"><i class="fa fa-user-o"></i> Sign Out</a>
 </div>
 
     <div class="wrapper">
