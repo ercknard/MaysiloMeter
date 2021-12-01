@@ -126,7 +126,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login">
+                <input type="submit" class="btn btn-primary" value="Login"> <a href="../register.php" class="btn btn-secondary ml-2">Back</a>
             </div>
         </form>
     </div>
