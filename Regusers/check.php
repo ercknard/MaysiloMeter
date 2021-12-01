@@ -32,7 +32,7 @@ if($inputtedCode == $correctCode){
         $_SESSION['message'] = 'Something is wrong!';
     }
 
-    header('location: register.php');
+    header('location: sms.php');
 }else{
     $_SESSION['message_type'] = 'danger';
     $_SESSION['message'] = 'Incorrect Code. Please try again!';
