@@ -47,7 +47,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: black;
+  background-color: #1AA7EC;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -89,6 +89,7 @@ body {
 <a href="Diagrams.php">Diagrams</a>
 <a href="Tables.php">Tables</a>
 <hr color="white">
+<p>Admin User : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b> </p>
 <a href="../logout.php" class="btn btn-danger pull-center ml-4 mr-4"><i class="fa fa-user-o"></i> Sign Out</a>
 </div>
 
