@@ -47,7 +47,7 @@ session_start();
 
                 <hr color="lightblue" width="100%">
 
-                <p>If the registration fails. Submit a request to ADMIN by click the button below. <br> <b> NOTE : All inputs are confidential. </b></p>
+                <p>If the registration fails. Submit a request to ADMIN by clicking the REQUEST button below. <br> <b> NOTE : All inputs are confidential. </b></p>
 
                 <a href="Request/request.php" class="btn btn-secondary ml-2">REQUEST</a> <a href="Login/login.php" class="btn btn-primary ml-5">Update Contact Number</a>
             </form>
