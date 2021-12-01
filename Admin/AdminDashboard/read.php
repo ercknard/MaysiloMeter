@@ -149,7 +149,7 @@ body {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
+                <h4>Admin User : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>, </h4>
 
 <hr color="lightblue" width="100%">
                     <h1 class="mt-5 mb-3">View Record</h1>
