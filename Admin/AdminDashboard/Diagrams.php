@@ -87,10 +87,10 @@ body {
 <div class="sidenav">
 <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
 <hr color="white">
-<a class="highlight" href="Dashboardini.php">User Details</a>
+<a href="Dashboardini.php">User Details</a>
 <a href="Request.php">Request</a>
 <a href="Announcements.php">Announcements</a>
-<a href="Diagrams.php">Diagrams</a>
+<a class="highlight" href="Diagrams.php">Diagrams</a>
 <a href="Tables.php">Tables</a>
 <hr color="white">
 <p>Admin User: <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>,</p>
