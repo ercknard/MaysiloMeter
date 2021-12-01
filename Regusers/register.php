@@ -28,21 +28,26 @@ session_start();
             </div>
         <?php endif ?>  
             <form method="POST" action="sms.php" width="100%">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                <span class="invalid-feedback"><?php echo $username_err; ?></span>
+            </div>  
+            <div class="form-group">
+                <label>Contact</label>
+                <input type="text" name="contact" class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>">
+                <span class="invalid-feedback"><?php echo $contact_err; ?></span>
+            </div>  
                 <div class="form-group">
-                    <label for="username">Username</label>
-                    <br>
-                    <input type="text" name="username" id="username" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="contact">Contact Number</label>
-                    <br>
-                    <input type="text" name="contact" id="contact" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <br>
-                    <input type="password" name="password" id="password" class="form-control">
-                </div>
+                <label>Password</label>
+                <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
+                <span class="invalid-feedback"><?php echo $password_err; ?></span>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
+                <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+            </div>
                 <input value="Register" type="submit" class="btn btn-primary btn-block">
 
                 <hr color="lightblue" width="100%">
