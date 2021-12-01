@@ -84,7 +84,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #0da2ff;
+  background-color: #1AA7EC;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -109,6 +109,10 @@ body {
     background-color: #8cd3ff;
 }
 
+.sidenav p{
+    text-align: center;
+    color: #ffffff;
+}
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
@@ -118,10 +122,15 @@ body {
 <body>
 
 <div class="sidenav">
+<img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
+<hr color="white">
 <a class="highlight" href="Dashboardini.php">User Details</a>
 <a href="Request.php">Request</a>
+<a href="Announcements.php">Announcements</a>
 <a href="Diagrams.php">Diagrams</a>
 <a href="Tables.php">Tables</a>
+<hr color="white">
+<p>Admin User: <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>,</p>
 <a href="../logout.php" class="btn btn-danger pull-center ml-4 mr-4"><i class="fa fa-user-o"></i> Sign Out</a>
 </div>
     <div class="wrapper">
