@@ -105,7 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         <hr color="lightblue" width="100%">
         <h2>Login</h2>
-        <p>Please fill in your ADMIN credentials to login.</p>
+        <p>Please fill in your User credentials to login.</p>
 
         <?php 
         if(!empty($login_err)){
