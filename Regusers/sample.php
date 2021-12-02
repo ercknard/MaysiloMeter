@@ -58,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate password
     if(empty(trim($_POST["contact"]))){
         $contact_err = "Please enter a contact.";     
-    } elseif(strlen(trim($_POST["password"])) < 11){
+    } elseif(strlen(trim($_POST["contact"])) < 11){
         $contact_err = "Contact must have atleast 11 characters.";
     } else{
         $contact = trim($_POST["contact"]);
