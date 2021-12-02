@@ -89,7 +89,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <h2>Change number</h2>
         <p>Please fill out this form to reset your contact.</p>
         <p>Welcome: <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>,</p>
-        <p>Welcome: <b><?php echo htmlspecialchars($_SESSION["id"]); ?></b>,</p>
+        <p>Your current number: <b><?php echo htmlspecialchars($_SESSION["contact"]); ?></b>,</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
 
             <div class="form-group">
