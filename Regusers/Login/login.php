@@ -61,19 +61,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             // Store data in session variables
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
-                            $_SESSION["username"] = $username;
-                            $_SESSION["password"] = $password;                               
+                            $_SESSION["username"] = $username;                            
                             
                             // Redirect user to welcome page
                             header("location: change.php");
                         } else{
                             // Password is not valid, display a generic error message
-                            $login_err = "Invalid password.";
+                            $login_err = "Invalid username or password.";
                         }
                     }
                 } else{
                     // Username doesn't exist, display a generic error message
-                    $login_err = "Invalid username.";
+                    $login_err = "Invalid username or password.";
                 }
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -106,8 +105,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         <hr color="lightblue" width="100%">
         <h2>Login</h2>
-        <p>Please fill in your User credentials to login.</p>
-        <p>If you want to update your user credentials you must login first.</p>
+        <p>Please fill in your ADMIN credentials to login.</p>
 
         <?php 
         if(!empty($login_err)){
@@ -127,7 +125,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Login"> <a href="../register.php" class="btn btn-secondary ml-2">Back</a>
+                <input type="submit" class="btn btn-primary" value="Login">
             </div>
         </form>
     </div>
