@@ -47,6 +47,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             mysqli_stmt_bind_param($stmt, "si", $param_contact, $param_id);
             
             // Set parameters
+            $param_contact = $new_contact;
             $param_id = $_SESSION["id"];
             
             // Attempt to execute the prepared statement
