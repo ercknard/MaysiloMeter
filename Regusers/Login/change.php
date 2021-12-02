@@ -69,8 +69,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($link);
 }
 ?>
-
-<?php
+ 
+ <?php
 // Check existence of id parameter before processing further
 if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
     
@@ -94,7 +94,9 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
                 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 
                 // Retrieve individual field value
+                $username = $row["username"];
                 $contact = $row["contact"];
+                $created_at = $row["created_at"];
             } else{
                 // URL doesn't contain valid id parameter. Redirect to error page
                 header("location: error.php");
@@ -117,7 +119,7 @@ if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
     exit();
 }
 ?>
- 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
