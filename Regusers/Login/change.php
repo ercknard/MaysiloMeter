@@ -12,12 +12,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$new_contact = $confirm_contact = "";
-$new_contact_err = $confirm_contact_err = "";
+$current_contact = $new_contact = $confirm_contact = "";
+$current_contact_err = $new_contact_err = $confirm_contact_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
+    // Validate new contact
+    if(empty(trim($_POST["current_contact"]))){
+        $current_contact_err = "Please enter your current contact number.";     
+    } else{
+        $confirm_contact = trim($_POST["current_contact"]);
+        if(empty($current_contact_err)){
+            $current_contact_err = "This input box cannot be blank";
+        }
+    }
+    
     // Validate new contact
     if(empty(trim($_POST["new_contact"]))){
         $new_contact_err = "Please enter the new contact.";     
@@ -34,6 +44,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $confirm_contact = trim($_POST["confirm_contact"]);
         if(empty($new_contact_err) && ($new_contact != $confirm_contact)){
             $confirm_contact_err = "contact did not match.";
+        }
+    }
+
+    // Validate credentials
+    if(empty($current_contact_err)){
+        // Prepare a select statement
+        $sql = "SELECT id, contact FROM tblusers WHERE contact = ?";
+        
+        if($stmt = mysqli_prepare($link, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_contact);
+            
+            // Set parameters
+            $param_contact = $contact;
         }
     }
         
@@ -89,6 +113,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <h2>Change number</h2>
         <p>Please fill out this form to reset your contact.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
+
+            <div class="form-group">
+                <label>Current contact number</label>
+                <input type="text" name="current_contact" class="form-control <?php echo (!empty($current_contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $current_contact; ?>">
+                <span class="invalid-feedback"><?php echo $current_contact_err; ?></span>
+            </div>
             <div class="form-group">
                 <label>New contact number</label>
                 <input type="text" name="new_contact" class="form-control <?php echo (!empty($new_contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $new_contact; ?>">
