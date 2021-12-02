@@ -12,22 +12,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$current_contact = $new_contact = $confirm_contact = "";
-$current_contact_err = $new_contact_err = $confirm_contact_err = "";
+$new_contact = $confirm_contact = "";
+$new_contact_err = $confirm_contact_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
  
-    // Validate new contact
-    if(empty(trim($_POST["current_contact"]))){
-        $current_contact_err = "Please enter your current contact number.";     
-    } else{
-        $confirm_contact = trim($_POST["current_contact"]);
-        if(empty($current_contact_err)){
-            $current_contact_err = "This input box cannot be blank";
-        }
-    }
-    
     // Validate new contact
     if(empty(trim($_POST["new_contact"]))){
         $new_contact_err = "Please enter the new contact.";     
@@ -47,20 +37,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
-    // Validate credentials
-    if(empty($current_contact_err)){
-        // Prepare a select statement
-        $sql = "SELECT id, contact FROM tblusers WHERE contact = ?";
-        
-        if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "s", $param_contact);
-            
-            // Set parameters
-            $param_contact = $contact;
-        }
-    }
-        
     // Check input errors before updating the database
     if(empty($new_contact_err) && empty($confirm_contact_err)){
         // Prepare an update statement
