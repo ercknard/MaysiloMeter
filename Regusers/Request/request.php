@@ -100,9 +100,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <span class="invalid-feedback"><?php echo $contact_err;?></span>
                         </div>
                         <div class="form-group">
-                            <label>Comment</label>
-                            <textarea type="text" name="comments" class="form-control <?php echo (!empty($comments_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $comments; ?>"></textarea>
-                            <span class="invalid-feedback"><?php echo $comments_err;?></span>
+                        <label>Purpose: <?=$row['comments']?></label></br>
+                        <input type="radio" name="comments" <?=$row['comments']=="for Registration" ? "checked" : ""?> value="A">for Registration.
+                        <input type="radio" name="comments" <?=$row['comments']=="to Update" ? "checked" : ""?> value="B">to Update.
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
                         <a href="../register.php" class="btn btn-secondary ml-2">Cancel</a>
