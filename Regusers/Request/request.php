@@ -82,7 +82,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
 
 <hr color="lightblue" width="100%">
-                    <h2 class="mt-5">Request Form</h2>
+                    <h2>Request Form</h2>
                     <p>Please fill up this REQUEST form to submit your credentials to ADMIN. An ADMIN will register you manually.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
