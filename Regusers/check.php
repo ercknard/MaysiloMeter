@@ -36,6 +36,6 @@ if($inputtedCode == $correctCode){
 }else{
     $_SESSION['message_type'] = 'danger';
     $_SESSION['message'] = 'Incorrect Code. Please try again!';
-    header('location: register.php');
+    header('location: sms.php');
 }
 ?>
