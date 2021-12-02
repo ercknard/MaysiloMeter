@@ -1,0 +1,101 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+<?php
+// Check existence of id parameter before processing further
+if(isset($_GET["id"]) && !empty(trim($_GET["id"]))){
+    // Include config file
+    require_once "config.php";
+    
+    // Prepare a select statement
+    $sql = "SELECT * FROM tblusers WHERE id = ?";
+    
+    if($stmt = mysqli_prepare($link, $sql)){
+        // Bind variables to the prepared statement as parameters
+        mysqli_stmt_bind_param($stmt, "i", $param_id);
+        
+        // Set parameters
+        $param_id = trim($_GET["id"]);
+        
+        // Attempt to execute the prepared statement
+        if(mysqli_stmt_execute($stmt)){
+            $result = mysqli_stmt_get_result($stmt);
+    
+            if(mysqli_num_rows($result) == 1){
+                /* Fetch result row as an associative array. Since the result set
+                contains only one row, we don't need to use while loop */
+                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                
+                // Retrieve individual field value
+                $username = $row["username"];
+                $contact = $row["contact"];
+                $created_at = $row["created_at"];
+            } else{
+                // URL doesn't contain valid id parameter. Redirect to error page
+                header("location: error.php");
+                exit();
+            }
+            
+        } else{
+            echo "Oops! Something went wrong. Please try again later.";
+        }
+    }
+     
+    // Close statement
+    mysqli_stmt_close($stmt);
+    
+    // Close connection
+    mysqli_close($link);
+} else{
+    // URL doesn't contain id parameter. Redirect to error page
+    header("location: error.php");
+    exit();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body{ font: 14px sans-serif; }
+        .wrapper{ width: 400px; padding: 20px; margin-left: auto; margin-right: auto;}
+    </style>
+</head>
+<body>
+<div class="wrapper">
+<img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
+
+<hr color="lightblue" width="100%"> 
+        <h2>CURRENT CREDENTIALS</h2>
+        <p>The updated user profile.</p>
+        <p>Welcome: <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>,</p>
+
+<hr color="lightblue" width="100%">
+                    <h1 class="mt-5 mb-3">View Record</h1>
+                    <div class="form-group">
+                        <label>Userame</label>
+                        <p><b><?php echo $row["username"]; ?></b></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact</label>
+                        <p><b><?php echo $row["contact"]; ?></b></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Time Created</label>
+                        <p><b><?php echo $row["created_at"]; ?></b></p>
+                    </div>
+                    <a class="btn btn-danger" href="logout.php">Sign out</a>
+            </div>
+        </form>
+    </div>    
+</body>
+</html>
