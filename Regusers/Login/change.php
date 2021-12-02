@@ -88,7 +88,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <hr color="lightblue" width="100%">
         <h2>Change number</h2>
         <p>Please fill out this form to reset your contact.</p>
-        <p>Welcome : <?php echo '<b>Welcome:</b>'.$_SESSION["contact"]; ?>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
             <div class="form-group">
                 <label>New contact number</label>
