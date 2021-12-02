@@ -54,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(mysqli_stmt_execute($stmt)){
                 // contact updated successfully. Destroy the session, and redirect to login page
                 session_destroy();
-                header("location: login.php");
+                header("location: change.php");
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -91,6 +91,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <p>Welcome: <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>,</p>
         <p>Your current number: <b><?php echo htmlspecialchars($_SESSION["contact"]); ?></b>,</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
+
 
             <div class="form-group">
                 <label>New contact number</label>
