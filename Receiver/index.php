@@ -10,7 +10,7 @@
     $mirmo = array();
     while($row =mysqli_fetch_assoc($result))
     {
-        $mirmo[] = $row;
+        $mirmo[] = $row; 
     }
     echo json_encode($mirmo);
 
@@ -19,7 +19,7 @@
     fwrite($fp, json_encode($mirmo));
     fclose($fp);
 
-    //close the db connection
+    //close the db connections
     mysqli_close($connection);
 ?>
 <?php
