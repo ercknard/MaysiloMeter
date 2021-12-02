@@ -10,12 +10,8 @@
     </style>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                <div class="mt-5 mb-3 clearfix">
-                <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
+<div class="wrapper">
+<img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
 
 <hr color="lightblue" width="100%">
                     <h2 class="mt-5">Request Submission Result :</h2>
