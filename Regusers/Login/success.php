@@ -28,7 +28,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <p>Your request is submitted successfully, double check if your number has been updated</p>
                     <p>Welcome: <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>,</p>
                     <p>Your updated number: <b><?php echo htmlspecialchars($_SESSION["contact"]); ?></b>,</p>
-                    <a class="btn btn-danger ml-2" href="logout.php">Sign out</a>
+                    <a class="btn btn-danger" href="logout.php">Sign out</a>
                     </form>
                 </div>
             </div>        
