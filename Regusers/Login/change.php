@@ -86,7 +86,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
 
 <hr color="lightblue" width="100%">
-        <h2>Change contact number</h2>
+        <h2>Change number</h2>
         <p>Please fill out this form to reset your contact.</p>
         <p>Welcome : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>, </p>
         <p>Current Number : <b><?php echo htmlspecialchars($_SESSION["contact"]); ?></b>, </p>
