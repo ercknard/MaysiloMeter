@@ -16,14 +16,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username_err = "Username can only contain letters, numbers, and underscores.";
     } else{
         // Prepare a select statement
-        $sql = "SELECT id FROM tblusers WHERE username = ?";
+        $sql = "SELECT id FROM sampusers WHERE username = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "s", $param_username);
+            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_contact);
             
             // Set parameters
             $param_username = trim($_POST["username"]);
+            $param_contact = trim($_POST["contact"]);
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -38,6 +39,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
             }
+
+            if(mysqli_stmt_num_rows($stmt) == 1){
+                $contact_err = "This contact is already taken.";
+            } else{
+                $contact = trim($_POST["contact"]);
+            }
+        } else{
+            echo "Oops! Something went wrong. Please try again later.";
+        }
+
 
             // Close statement
             mysqli_stmt_close($stmt);
@@ -67,14 +78,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         
         // Prepare an insert statement
-        $sql = "INSERT INTO tblusers (username, password) VALUES (?, ?)";
+        $sql = "INSERT INTO sampusers (username, contact, password) VALUES (?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+            mysqli_stmt_bind_param($stmt, "sss", $param_username, $param_contact, $param_password);
             
             // Set parameters
             $param_username = $username;
+            $param_contact = $contact;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
             
             // Attempt to execute the prepared statement
@@ -119,6 +131,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
             </div>    
+            <div class="form-group">
+                <label>Contact</label>
+                <input type="text" name="contact" class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>">
+                <span class="invalid-feedback"><?php echo $contact_err; ?></span>
+            </div> 
             <div class="form-group">
                 <label>Password</label>
                 <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
