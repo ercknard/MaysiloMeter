@@ -74,7 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Reset contact</title>
+    <title>Reset Contact Number</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{ font: 14px sans-serif; }
@@ -86,18 +86,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
 
 <hr color="lightblue" width="100%">
-        <h2>Reset contact</h2>
+        <h2>Change contact number</h2>
         <p>Please fill out this form to reset your contact.</p>
         <p>Welcome : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>, </p>
         <p>Current Number : </p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
             <div class="form-group">
-                <label>New contact</label>
+                <label>New contact number</label>
                 <input type="text" name="new_contact" class="form-control <?php echo (!empty($new_contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $new_contact; ?>">
                 <span class="invalid-feedback"><?php echo $new_contact_err; ?></span>
             </div>
             <div class="form-group">
-                <label>Confirm contact</label>
+                <label>Confirm contact number</label>
                 <input type="text" name="confirm_contact" class="form-control <?php echo (!empty($confirm_contact_err)) ? 'is-invalid' : ''; ?>">
                 <span class="invalid-feedback"><?php echo $confirm_contact_err; ?></span>
             </div>
