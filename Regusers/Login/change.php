@@ -54,7 +54,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(mysqli_stmt_execute($stmt)){
                 // contact updated successfully. Destroy the session, and redirect to login page
                 header("location: view.php");
-                exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
             }
