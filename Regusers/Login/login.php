@@ -97,14 +97,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; margin-left: auto; margin-right: auto;}
+        .wrapper{ width: 400px; padding: 20px; margin-left: auto; margin-right: auto;}
     </style>
 </head>
 <body>
-    <div class="wrapper">
-    <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
+<div class="wrapper">
+<img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
 
-        <hr color="lightblue" width="100%">
+<hr color="lightblue" width="100%"> 
         <h2>Login</h2>
         <p>Please fill in your USER credentials to login.</p>
         <p><b>In order to change your contact number you must login first.</b></p>
