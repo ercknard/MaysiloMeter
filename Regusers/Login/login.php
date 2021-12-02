@@ -107,6 +107,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <hr color="lightblue" width="100%">
         <h2>Login</h2>
         <p>Please fill in your USER credentials to login.</p>
+        <p><b>In order to change your contact number you must login first.</b></p>
 
         <?php 
         if(!empty($login_err)){
