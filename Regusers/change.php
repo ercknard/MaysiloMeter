@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check input errors before updating the database
     if(empty($new_contact_err) && empty($confirm_contact_err)){
         // Prepare an update statement
-        $sql = "UPDATE tblusers SET contact = ? WHERE id = ?";
+        $sql = "UPDATE sampusers SET contact = ? WHERE id = ?";
         
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
