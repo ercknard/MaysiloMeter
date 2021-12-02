@@ -38,18 +38,28 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $contact = $input_contact;
     }
     
+    // Validate password
+    if(empty(trim($_POST["password"]))){
+        $password_err = "Please enter a password.";     
+    } elseif(strlen(trim($_POST["password"])) < 6){
+        $password_err = "Password must have atleast 6 characters.";
+    } else{
+        $password = trim($_POST["password"]);
+    }
+
     // Check input errors before inserting in database
-    if(empty($username_err) && empty($contact_err)){
+    if(empty($username_err) && empty($contact_err) && empty($password_err)){
         // Prepare an insert statement
-        $sql = "INSERT INTO tblusers (username, contact) VALUES (?, ?)";
+        $sql = "INSERT INTO tblusers (username, contact, password) VALUES (?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_contact);
+            mysqli_stmt_bind_param($stmt, "sss", $param_username, $param_contact, $param_password);
             
             // Set parameters
             $param_username = $username;
             $param_contact = $contact;
+            $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -174,6 +184,12 @@ body {
                             <label>Contact</label>
                             <input type="text" name="contact" class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>">
                             <span class="invalid-feedback"><?php echo $contact_err;?></span>
+                        </div>
+                        </div>  
+                            <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
+                            <span class="invalid-feedback"><?php echo $password_err; ?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
                         <a href="Dashboardini.php" class="btn btn-secondary ml-2">Cancel</a>
