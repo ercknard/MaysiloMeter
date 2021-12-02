@@ -30,31 +30,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if(mysqli_stmt_execute($stmt)){
                 /* store result */
                 mysqli_stmt_store_result($stmt);
-                
-                if(mysqli_stmt_num_rows($stmt) == 1){
-                    $username_err = "This username is already taken.";
-                } else{
-                    $username = trim($_POST["username"]);
-                }
-            } else{
-                echo "Oops! Something went wrong. Please try again later.";
-            }
+
 
             if(mysqli_stmt_num_rows($stmt) == 1){
-                $contact_err = "This contact is already taken.";
+                $username_err = "This username is already taken.";
             } else{
-                $contact = trim($_POST["contact"]);
+                $username = trim($_POST["username"]);
             }
         } else{
             echo "Oops! Something went wrong. Please try again later.";
         }
 
-
-            // Close statement
-            mysqli_stmt_close($stmt);
-        }
+        // Close statement
+        mysqli_stmt_close($stmt);
     }
-    
+}
+
     // Validate password
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter a password.";     
