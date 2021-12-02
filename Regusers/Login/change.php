@@ -60,26 +60,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo "Oops! Something went wrong. Please try again later.";
             }
 
-            if(mysqli_stmt_execute($stmt)){
-                $result = mysqli_stmt_get_result($stmt);
-        
-                if(mysqli_num_rows($result) == 1){
-                    /* Fetch result row as an associative array. Since the result set
-                    contains only one row, we don't need to use while loop */
-                    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-                    
-                    // Retrieve individual field value
-                    $username = $row["username"];
-                    $contact = $row["contact"];
-                    $created_at = $row["created_at"];
-                } else{
-                    // URL doesn't contain valid id parameter. Redirect to error page
-                    header("location: error.php");
-                    exit();
-                }
-                
-            }
-
             // Close statement
             mysqli_stmt_close($stmt);
         }
@@ -88,8 +68,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
     mysqli_close($link);
 }
-?>
- 
 ?>
 
 <!DOCTYPE html>
@@ -111,7 +89,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <h2>Reset contact</h2>
         <p>Please fill out this form to reset your contact.</p>
         <p>Welcome : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>, </p>
-        <p>Current Number : <p><b><?php echo $row["contact"]; ?></b></p>
+        <p>Current Number : <b><?php echo htmlspecialchars($_SESSION["id"]); ?></b>, </p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
             <div class="form-group">
                 <label>New contact</label>
