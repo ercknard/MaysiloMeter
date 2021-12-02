@@ -26,7 +26,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <hr color="lightblue" width="100%">
                     <h2>Change number Submission Result :</h2>
                     <p><b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>,Your request is submitted successfully.</p>
-                    <p>Your updated number: <b><?php echo htmlspecialchars($_SESSION["contact"]); ?></b>,</p>
                     <a class="btn btn-danger" href="logout.php">Sign out</a>
                     </form>
                 </div>
