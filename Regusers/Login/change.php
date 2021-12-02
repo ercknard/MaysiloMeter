@@ -91,11 +91,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
 
             <div class="form-group">
-                <label>Current contact number</label>
-                <input type="text" name="current_contact" class="form-control <?php echo (!empty($current_contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $current_contact; ?>">
-                <span class="invalid-feedback"><?php echo $current_contact_err; ?></span>
-            </div>
-            <div class="form-group">
                 <label>New contact number</label>
                 <input type="text" name="new_contact" class="form-control <?php echo (!empty($new_contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $new_contact; ?>">
                 <span class="invalid-feedback"><?php echo $new_contact_err; ?></span>
