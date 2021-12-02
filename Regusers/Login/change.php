@@ -89,7 +89,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <h2>Reset contact</h2>
         <p>Please fill out this form to reset your contact.</p>
         <p>Welcome : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>, </p>
-        <p>Current Number : <b><?php echo htmlspecialchars($_SESSION["id"]); ?></b>, </p>
+        <p>Current Number : </p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post"> 
             <div class="form-group">
                 <label>New contact</label>
@@ -103,7 +103,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
-                <a class="btn btn-link ml-2" href="logout.php">Sign out</a>
+                <a class="btn btn-danger ml-2" href="logout.php">Sign out</a>
             </div>
         </form>
     </div>    
