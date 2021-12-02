@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate new contact
     if(empty(trim($_POST["new_contact"]))){
         $new_contact_err = "Please enter the new contact.";     
-    } elseif(strlen(trim($_POST["new_contact"])) < 6){
+    } elseif(strlen(trim($_POST["new_contact"])) < 11){
         $new_contact_err = "contact must have atleast 6 characters.";
     } else{
         $new_contact = trim($_POST["new_contact"]);
