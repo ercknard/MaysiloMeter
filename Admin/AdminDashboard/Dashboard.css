@@ -15,5 +15,10 @@
   min-height: 761px;
   margin-top: 20px;
   margin-bottom: 20px;
-  height: auto;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-custom-html-1 {
+    height: auto;
+  }
 }

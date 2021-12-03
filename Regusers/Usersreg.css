@@ -9,7 +9,6 @@
 .u-section-1 .u-custom-html-1 {
   min-height: 790px;
   background-image: linear-gradient(to right, #478ac9, #adf6f2);
-  height: auto;
   width: 460px;
   margin: 30px auto;
 }
@@ -20,6 +19,7 @@
   }
 
   .u-section-1 .u-custom-html-1 {
+    height: auto;
     min-height: 719px;
   }
 }
