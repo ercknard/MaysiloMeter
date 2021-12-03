@@ -97,10 +97,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         </div>
                         <div class="form-group">
                         <label>Purpose: <?=$row['comments']?></label></br>
-                        <input type="radio" name="comments" <?=$row['comments']=="for Registration" ? "checked" : ""?> value="REGISTRATION"> <h5>for Registration.</h5>
-                        <BR>
+                        <input type="radio" name="comments" <?=$row['comments']=="for Registration" ? "checked" : ""?> value="REGISTRATION"> <h6>for Registration.</h6>
                         <br>
-                        <input type="radio" name="comments" <?=$row['comments']=="to Update" ? "checked" : ""?> value="UPDATE"> <h5>to Update.</h5>
+                        <input type="radio" name="comments" <?=$row['comments']=="to Update" ? "checked" : ""?> value="UPDATE"> <h6>to Update.</h6>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
                         <a href="../register.php" class="btn btn-secondary ml-2">Cancel</a>
