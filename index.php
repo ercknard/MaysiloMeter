@@ -6,7 +6,7 @@
     <meta name="keywords" content="Welcome to Maysilo">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Home</title>
+    <title>FloodMeter | Home</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
 <link rel="stylesheet" href="Home.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
@@ -29,11 +29,11 @@
 		"logo": "images/banner.png"
 }</script>
     <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Home">
+    <meta property="og:title" content="FloodMeter | Home">
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   </head>
-  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-stick-footer"><header class="u-clearfix u-grey-10 u-header u-sticky u-header" id="sec-5caa"><div class="u-clearfix u-sheet u-sheet-1">
+  <body class="u-body u-stick-footer"><header class="u-clearfix u-grey-10 u-header u-sticky u-header" id="sec-5caa"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="/Home.html" data-page-id="63320719" class="u-image u-logo u-image-1" data-image-width="309" data-image-height="104" title="home">
           <img src="images/banner.png" class="u-logo-image u-logo-image-1">
         </a>
