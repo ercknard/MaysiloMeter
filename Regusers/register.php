@@ -56,6 +56,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         $password = trim($_POST["password"]);
     }
+
+        // Validate password
+        if(empty(trim($_POST["contact"]))){
+            $contact_err = "Please enter a contact number.";     
+        } elseif(strlen(trim($_POST["contact"])) < 11){
+            $contact_err = "Must enter 11 digit contact number";
+        } else{
+            $contact = trim($_POST["contact"]);
+        }
     
     // Validate confirm password
     if(empty(trim($_POST["confirm_password"]))){
