@@ -5,57 +5,6 @@ $username = $_POST['username'];
 $contact = $_POST['contact'];
 $pssword = $_POST['password'];
 
-// Generate sessions
-$_SESSION['otp'] = $code;
-$_SESSION['username'] = $username;
-$_SESSION['contact'] = $contact;
-$_SESSION['password'] = $password;
-
-// Randomizer
-function getRandomCode() {
-    $var ="0123456789";
-    srand((double)microtime()*1000000);
-    $i = 0;
-    $rand_Code = '' ;
-        while ($i <= 5) {
-            $num = rand() % 10;
-            $tmp = substr($var, $num, 1);
-            $rand_Code = $rand_Code . $tmp;
-            $i++;
-        }
-    return $rand_Code;
-}
-// Send SMS to User
-sendSMS($contact, $code);
-function sendSMS($cnumber, $vcode){
-    $curl = curl_init();
-
-    $message = "From Maysilo Flood O' Meter. This is your 6 digit verification code:  ".$vcode;
-    $num = $cnumber;
-
-    curl_setopt_array($curl, array(
-        CURLOPT_URL => "https://ws-live.txtbox.com/v1/sms/push",
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 0,
-        CURLOPT_FOLLOWLOCATION => false,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POSTFIELDS => array('message' => $message, 'number' => $num ),
-
-        // Insert your API here
-        // 53316f0a4a7326fdad5c18608c9e53d3
-        CURLOPT_HTTPHEADER => array(
-        "X-TXTBOX-Auth: 4cda15eaa2c11f414b8627e0489805ed"
-        ),
-        ));
-
-
-    }
-?>
-
-<?php
 // Include config file
 require_once "config.php";
  
@@ -159,7 +108,57 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
     mysqli_close($link);
 }
+
+// Generate sessions
+$_SESSION['otp'] = $code;
+$_SESSION['username'] = $username;
+$_SESSION['contact'] = $contact;
+$_SESSION['password'] = $password;
+
+// Randomizer
+function getRandomCode() {
+    $var ="0123456789";
+    srand((double)microtime()*1000000);
+    $i = 0;
+    $rand_Code = '' ;
+        while ($i <= 5) {
+            $num = rand() % 10;
+            $tmp = substr($var, $num, 1);
+            $rand_Code = $rand_Code . $tmp;
+            $i++;
+        }
+    return $rand_Code;
+}
+// Send SMS to User
+sendSMS($contact, $code);
+function sendSMS($cnumber, $vcode){
+    $curl = curl_init();
+
+    $message = "From Maysilo Flood O' Meter. This is your 6 digit verification code:  ".$vcode;
+    $num = $cnumber;
+
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => "https://ws-live.txtbox.com/v1/sms/push",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => false,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => array('message' => $message, 'number' => $num ),
+
+        // Insert your API here
+        // 53316f0a4a7326fdad5c18608c9e53d3
+        CURLOPT_HTTPHEADER => array(
+        "X-TXTBOX-Auth: 4cda15eaa2c11f414b8627e0489805ed"
+        ),
+        ));
+
+
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
