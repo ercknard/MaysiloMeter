@@ -23,6 +23,13 @@ session_start();
         
         <h2>User Registration</h2>
         <p>If you wish to have flood alerts through sms kindly fill out the form.</p>
+
+        <?php if(isset($_SESSION['message'])): ?>
+            <div class="alert alert-<?= $_SESSION['message_type'] ?>" role="alert">
+                <?= $_SESSION['message'] ?>
+            </div>
+        <?php endif ?>  
+        
             <form method="POST" action="sms.php" width="100%">
             <div class="form-group">
                 <label>Username</label>
