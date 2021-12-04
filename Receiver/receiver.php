@@ -15,7 +15,7 @@
     echo json_encode($mirmo);
 
     //write to json file
-    $fp = fopen('users.json', 'w');
+    $fp = fopen('index.json', 'w');
     fwrite($fp, json_encode($mirmo));
     fclose($fp);
 
