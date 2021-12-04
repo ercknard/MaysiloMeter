@@ -137,7 +137,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
         <?php endif ?>  
         
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" action="sms.php" method="post">
+        <form action="sms.php" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
@@ -158,7 +158,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
-                <input value="Register" type="submit" class="btn btn-primary btn-block">
+                <input formaction="sms.php" value="Register" type="submit" class="btn btn-primary btn-block">
 
                 <hr color="lightblue" width="100%">
 
