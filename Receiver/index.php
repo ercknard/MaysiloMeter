@@ -1,4 +1,7 @@
-
+<?php
+header("Location: https://example.com/newpage.html", true, 301);
+exit;
+?>
 <?php
 
     //open connection to mysql db
