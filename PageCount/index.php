@@ -25,7 +25,21 @@ if (0 === $row_count) {
    }
 }
 
-// make your LIMIT query here as shown above
+// determine page number from $_GET
+$page = 1;
+if(!empty($_GET['page'])) {
+    $page = filter_input(INPUT_GET, 'page', FILTER_VALIDATE_INT);
+    if(false === $page) {
+        $page = 1;
+    }
+}
+
+// set the number of items to display per page
+$items_per_page = 10;
+
+// build query
+$offset = ($page - 1) * $items_per_page;
+$sql = "SELECT * FROM tblusers LIMIT " . $offset . "," . $items_per_page;
 
 
 // later when outputting page, you can simply work with $page and $page_count to output links
