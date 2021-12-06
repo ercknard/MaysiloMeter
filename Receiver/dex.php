@@ -52,7 +52,14 @@ for ($i = 1; $i <= $page_count; $i++) {
     }
  }
 
- 
+//create an array11
+$mirmo = array();
+while($row =mysqli_fetch_assoc($result))
+{
+    $mirmo[] = $row; 
+}
+header('Content-Type: application/json; charset=utf-8');
+echo json_encode($mirmo);
 
 //close the db connections
 mysqli_close($con);
