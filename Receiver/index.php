@@ -33,12 +33,7 @@ echo $json;
         $mirmo[] = $row; 
     }
     echo json_encode($mirmo);
-
-    //write to json file
-    $fp = fopen('index.json', 'w');
-    fwrite($fp, json_encode($mirmo));
-    fclose($fp);
-
+    
     //close the db connections
     mysqli_close($connection);
 ?>
