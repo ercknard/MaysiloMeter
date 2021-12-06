@@ -4,7 +4,7 @@
 //open connection to mysql db
 $con = mysqli_connect("us-cdbr-east-04.cleardb.com","b64914f07d5e65","f742c533","heroku_5142987c57081aa") or die("Error " . mysqli_error($connection));
 
-$sql = "SELECT * FROM tblusers";
+$sql = "SELECT id FROM tblusers";
 $result = mysqli_query($con, $sql);
 $row_count = mysqli_num_rows($result);
 // free the result set as you don't need it anymore
@@ -51,11 +51,6 @@ for ($i = 1; $i <= $page_count; $i++) {
         echo '<a href="/dex.php?page=' . $i . '">Page ' . $i . '</a><br>';
     }
  }
-$page_number = mysqli_escape_string($connection, $_GET['page']);
-$count_per_page = 10;
-$next_offset = $page_number * $count_per_page;
-
-
 //close the db connections
 mysqli_close($con);
 ?>
