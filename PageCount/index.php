@@ -9,6 +9,7 @@ $result=mysqli_query($con,"SELECT COUNT(*) as total from tblusers");
 $data=mysqli_fetch_assoc($result);
 echo $data['total'];
 
+$limit = 10;
 $user_count = mysqli_fetch_row($result);   // say total count 9  
 $total_records = $user_count[0];   //9
 $total_pages = ceil($total_records / $limit);
