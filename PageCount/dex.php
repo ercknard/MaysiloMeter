@@ -12,7 +12,7 @@ $total_pages = ceil($total_records / $limit);
 
 $mirmo = array($total_pages);
 {
-    $mirmo[] = $row;
+    $mirmo = $row[0];
 }
 
 header('Content-Type: application/json; charset=utf-8');
