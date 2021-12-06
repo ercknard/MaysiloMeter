@@ -29,6 +29,6 @@ $con = mysqli_connect("us-cdbr-east-04.cleardb.com","b64914f07d5e65","f742c533",
       }
     
     if($page<$total_pages) {
-        echo "<a href='blog.php?page=".($page+1)."' class='btn customBtn2'>NEXT</a>";   
+        echo "<a href='dex.php?page=".($page+1)."' class='btn customBtn2'>NEXT</a>";   
     }       
 ?>
