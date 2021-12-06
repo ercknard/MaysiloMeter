@@ -14,8 +14,6 @@
     {
         $mirmo[] = $row; 
     }
-    echo json_encode($mirmo);
-
     header('Content-Type: application/json; charset=utf-8');
     echo json_encode($mirmo);
 
