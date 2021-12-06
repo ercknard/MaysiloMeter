@@ -8,7 +8,7 @@
     $sql = "select * from tblusers";
     $result = mysqli_query($connection, $sql) or die("Error in Selecting " . mysqli_error($connection));
 
-    //create an array1
+    //create an array11
     $mirmo = array();
     while($row =mysqli_fetch_assoc($result))
     {
