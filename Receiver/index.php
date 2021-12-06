@@ -1,5 +1,5 @@
 <?php
-header("Location: https://example.com/newpage.html", true, 301);
+header("Location: floodometer.xyz/Receiver/", true, 301);
 exit;
 ?>
 <?php
