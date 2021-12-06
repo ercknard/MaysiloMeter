@@ -25,14 +25,5 @@ $con = mysqli_connect("us-cdbr-east-04.cleardb.com","b64914f07d5e65","f742c533",
     $total_pages = ceil($total_records / $limit);    // 9/3=  3
 
     header('Content-Type: application/json; charset=utf-8');
-    echo json_encode($mirmo);
-
-    if($page >= 2){
-        echo "<a href='dex.php?page=".($page-1)."' class='btn 
-     customBtn2'>Previous</a>";
-      }
-    
-    if($page<$total_pages) {
-        echo "<a href='dex.php?page=".($page+1)."' class='btn customBtn2'>Next</a>";   
-    }       
+    echo json_encode($mirmo);     
 ?>
