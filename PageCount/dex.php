@@ -13,7 +13,7 @@ $total_pages = ceil($total_records / $limit);
 $mirmo = array($total_pages);
 
 header('Content-Type: application/json; charset=utf-8');
-echo json_encode($mirmo)['Pagecount'];   // 9/3=  3
+echo json_encode($mirmo);   // 9/3=  3
 
 
     //close the db connections
