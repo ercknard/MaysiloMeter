@@ -11,9 +11,6 @@ $total_records = $user_count[0];   //9
 $total_pages = ceil($total_records / $limit);
 
 $mirmo = array($total_pages);
-{
-    $mirmo = $row[0];
-}
 
 header('Content-Type: application/json; charset=utf-8');
 echo json_encode($mirmo);   // 9/3=  3
