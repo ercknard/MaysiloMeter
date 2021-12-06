@@ -2,10 +2,10 @@
 <?php
 
 //open connection to mysql db
-$con = mysqli_connect("us-cdbr-east-04.cleardb.com","b64914f07d5e65","f742c533","heroku_5142987c57081aa") or die("Error " . mysqli_error($connection));
+$con = mysqli_connect("us-cdbr-east-04.cleardb.com","b64914f07d5e65","f742c533","heroku_5142987c57081aa") or die("Error " . mysqli_error($con));
 
-$sql = "SELECT id FROM tblusers";
-$result = mysqli_query($con, $sql);
+$sql = "select * from tblusers";
+$result = mysqli_query($con, $sql) or die("Error in Selecting " . mysqli_error($con));
 $row_count = mysqli_num_rows($result);
 // free the result set as you don't need it anymore
 mysqli_free_result($result);
@@ -37,7 +37,7 @@ $items_per_page = 10;
 
 // build query
 $offset = ($page - 1) * $items_per_page;
-$sql = "SELECT * FROM tblusers LIMIT " . $offset . "," . $items_per_page;
+$sql = "select * from tblusers LIMIT " . $offset . "," . $items_per_page;
 
 // make your LIMIT query here as shown above
 
@@ -51,6 +51,9 @@ for ($i = 1; $i <= $page_count; $i++) {
         echo '<a href="/dex.php?page=' . $i . '">Page ' . $i . '</a><br>';
     }
  }
+
+ 
+
 //close the db connections
 mysqli_close($con);
 ?>
