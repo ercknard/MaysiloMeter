@@ -115,7 +115,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>  
             <div class="form-group">
                 <label>Contact Number</label>
-                <input type="text" name="contact" placeholder="Enter your 11 digit mobile number." class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>" required oninvalid="this.setCustomValidity('Enter Your Contact number here.')"
+                <input type="number" name="contact" placeholder="Enter your 11 digit mobile number." class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>" required oninvalid="this.setCustomValidity('Enter Your Contact number here.')"
   oninput="this.setCustomValidity('')" maxlength="11" minlength="11" pattern="\d{11}">
                 <span class="invalid-feedback"><?php echo $contact_err; ?></span>
             </div>  
