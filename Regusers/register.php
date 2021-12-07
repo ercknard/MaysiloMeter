@@ -1,7 +1,7 @@
 <?php 
 session_start();
 ?>
-<?php
+<!--
 // Define variables and initialize with empty valuess
 $username = $contact = $password = $confirm_password = "";
 $username_err = $contact_err = $password_err = $confirm_password_err = "";
@@ -74,7 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 }
-?>
+?> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
