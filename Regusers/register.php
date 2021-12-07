@@ -1,80 +1,6 @@
 <?php 
 session_start();
-?>
-<!--
-// Define variables and initialize with empty valuess
-$username = $contact = $password = $confirm_password = "";
-$username_err = $contact_err = $password_err = $confirm_password_err = "";
- 
-// Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
-    // Validate username
-    if(empty(trim($_POST["username"]))){
-        $username_err = "Please enter a username.";
-    } elseif(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["username"]))){
-        $username_err = "Username can only contain letters, numbers, and underscores.";
-    } else{
-        // Prepare a select statement
-        $sql = "SELECT id FROM tblusers WHERE username = ?";
-        
-        if($stmt = mysqli_prepare($link, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "s", $param_username);
-            
-            // Set parameters
-            $param_username = trim($_POST["username"]);
-            
-            // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                /* store result */
-                mysqli_stmt_store_result($stmt);
-
-
-            if(mysqli_stmt_num_rows($stmt) == 1){
-                $username_err = "This username is already taken.";
-            } else{
-                $username = trim($_POST["username"]);
-            }
-        } else{
-            echo "Oops! Something went wrong. Please try again later.";
-        }
-
-        // Close statement
-        mysqli_stmt_close($stmt);
-    }
-}
-
-    // Validate password
-    if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter a password.";     
-    } elseif(strlen(trim($_POST["password"])) < 6){
-        $password_err = "Password must have atleast 6 characters.";
-    } else{
-        $password = trim($_POST["password"]);
-    }
-    
-
-    // Validate password
-    if(empty(trim($_POST["contact"]))){
-        $contact_err = "Please enter a contact.";     
-    } elseif(strlen(trim($_POST["contact"])) < 11){
-        $contact_err = "Contact must have atleast 11 characters.";
-    } else{
-        $contact = trim($_POST["contact"]);
-    }
-
-    // Validate confirm password11
-    if(empty(trim($_POST["confirm_password"]))){
-        $confirm_password_err = "Please confirm password.";     
-    } else{
-        $confirm_password = trim($_POST["confirm_password"]);
-        if(empty($password_err) && ($password != $confirm_password)){
-            $confirm_password_err = "Password did not match.";
-        }
-    }
-}
-?> -->
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,25 +9,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script src="new.js"></script>
     <style>
         body{ font: 14px sans-serif; }
         .wrapper{ width: 400px; padding: 20px; margin-left: auto; margin-right: auto;}        
+/* Style all input fields */
 
+/* Style the container for inputs */
+.container {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
 
 /* The message box is shown when the user clicks on the password field */
 #message12 {
   display:none;
-  background: #f1f1f1;
+  border: 1px solid blue;
   color: #000;
   position: relative;
-  padding: 20px;
+  padding: 10px;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #message12 p {
-  padding: 10px 35px;
-  font-size: 18px;
+  padding-left: 35px;
 }
 
 /* Add a green text color and a checkmark when the requirements are right */
@@ -112,10 +43,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 .valid:before {
   position: relative;
   left: -35px;
-  content: "&#10004;";
+  content: "✔";
 }
 
-/* Add a red text color and an "x" icon when the requirements are wrong */
+/* Add a red text color and an "x" when the requirements are wrong */
 .invalid {
   color: red;
 }
@@ -123,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 .invalid:before {
   position: relative;
   left: -35px;
-  content: "&#10006;";
+  content: "✖";
 }
     </style>
    
@@ -146,34 +77,31 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <form action="sms.php" method="post">
             <div class="form-group">
                 <label>Username</label>
-                <input type="text" name="username" placeholder="Your desired name." class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" required oninvalid="this.setCustomValidity('Enter Your Username here')"
+                <input type="text" name="username" placeholder="Your desired name." class="form-control" required oninvalid="this.setCustomValidity('Enter Your Username here')"
   oninput="this.setCustomValidity('')">
-                <span class="invalid-feedback"><?php echo $username_err; ?></span>
             </div>  
             <div class="form-group">
                 <label>Contact Number</label>
-                <input type="number" name="contact" placeholder="Enter your 11 digit mobile number." class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>" required oninvalid="this.setCustomValidity('Enter Your Contact number here.')"
+                <input type="number" name="contact" placeholder="Enter your 11 digit mobile number."  class="form-control" required oninvalid="this.setCustomValidity('Enter Your Contact number here.')"
   oninput="this.setCustomValidity('')" maxlength="11" minlength="11" pattern="\d{11}">
-                <span class="invalid-feedback"><?php echo $contact_err; ?></span>
             </div>  
                 <div class="form-group">
                 <label>Password</label>
-                <input type="password" id="password" name="password" placeholder="Put at least 6 character password." class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" required oninvalid="this.setCustomValidity('Enter a valid password.')"
-  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onkeyup='check();'>
-                <span class="invalid-feedback"><?php echo $password_err; ?></span>
+                <input type="password" id="password" name="password" placeholder="Put at least 6 character password." class="form-control" required oninvalid="this.setCustomValidity('Enter a valid password.')"
+  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" >
             </div>
             <div id="message12">
-  <b>Password must contain the following:</b>
-  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-  <p id="number" class="invalid">A <b>number</b></p>
-  <p id="length" class="invalid">Minimum <b>6 characters</b></p>
-</div>
+            <b>Password must contain the following:</b>
+            <hr color="lightblue" width="100%">
+            <p id="letter" class="invalid">A lowercase letter 
+            <p id="capital" class="invalid">A capital (uppercase) letter
+            <p id="number" class="invalid">A number
+            <p id="length" class="invalid">Minimum of 6 characters</p>
+            </div>
             <div class="form-group">
                 <label>Confirm Password</label>
-                <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat password." class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" required oninvalid="this.setCustomValidity('Please make sure your passwords match.')"
-  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onkeyup='check();'>
-                <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat password." class="form-control" required oninvalid="this.setCustomValidity('Please make sure your passwords match.')"
+  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" >
             </div>
                 <input value="Register" type="submit" class="btn btn-primary btn-block">
 
@@ -184,6 +112,64 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <a href="Request/request.php" class="btn btn-secondary ml-2">REQUEST</a> <a href="Login/login.php" class="btn btn-primary ml-2">Update Contact Number</a>
             </form>
     </div>
-    
+<script>
+var myInput = document.getElementById("password");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message12").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message12").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
 </body>
 </html>
