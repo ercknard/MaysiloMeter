@@ -48,11 +48,12 @@
   }
 }
 
-.u-section-1 .u-shape-1 {
-  transition-property: fill, color, background-image, stroke-width, border-style, border-width, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-size, background-position !important;
+.u-section-1 .u-shape-1,
+.u-section-1 .u-shape-1:before {
+  transition-property: fill, color, background-color, stroke-width, border-style, border-width, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, background-size, background-position;
 }
 
-.u-section-1 .u-shape-1:hover {
+.u-section-1 .u-shape-1.u-shape-1.u-shape-1:hover {
   transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
 }.u-section-2 .u-sheet-1 {
   min-height: 256px;
