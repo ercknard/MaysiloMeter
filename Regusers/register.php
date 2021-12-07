@@ -2,7 +2,7 @@
 session_start();
 ?>
 <?php
-// Define variables and initialize with empty values
+// Define variables and initialize with empty valuess
 $username = $contact = $password = $confirm_password = "";
 $username_err = $contact_err = $password_err = $confirm_password_err = "";
  
