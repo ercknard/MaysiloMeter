@@ -13,6 +13,17 @@ session_start();
         body{ font: 14px sans-serif; }
         .wrapper{ width: 400px; padding: 20px; margin-left: auto; margin-right: auto;}
     </style>
+    <script>
+    function onChange() {
+  const password = document.querySelector('input[name=password]');
+  const confirm = document.querySelector('input[name=confirm]');
+  if (confirm.value === password.value) {
+    confirm.setCustomValidity('');
+  } else {
+    confirm.setCustomValidity('Passwords do not match');
+  }
+}
+</script>
 </head>
 <body>
 <div class="wrapper">
@@ -45,13 +56,13 @@ session_start();
                 <div class="form-group">
                 <label>Password</label>
                 <input type="password" name="password" placeholder="Put at least 6 character password." class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" required oninvalid="this.setCustomValidity('Enter a 6 character Password.')"
-  oninput="this.setCustomValidity('')" minlength="6">
+  oninput="this.setCustomValidity('')" minlength="6" onChange="onChange()">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
                 <label>Confirm Password</label>
                 <input type="password" name="confirm_password" placeholder="Repeat password." class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" required oninvalid="this.setCustomValidity('Verify your password here.')"
-  oninput="this.setCustomValidity('')" minlength="6">
+  oninput="this.setCustomValidity('')" minlength="6" onChange="onChange()">
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
                 <input value="Register" onclick="matchPassword()" type="submit" class="btn btn-primary btn-block">
