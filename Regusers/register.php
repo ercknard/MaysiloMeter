@@ -77,6 +77,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
 
+<script>
+document.querySelector('.button').onclick = function(){
+    var password = document.querySelector('.password').value,
+        confirmPassword = document.querySelector ('.confirmPassword').value;
+       if(password == ""){
+    alert("Field cannot be empty.");
+}
+else if(password != confirmPassword){
+    alert("Password didn't match try again.");
+    return false
+}
+else if(password == confirmPassword){
+    alert("Password match.")
+}
+return  
+
+}
+
+</script>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -140,5 +160,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <a href="Request/request.php" class="btn btn-secondary ml-2">REQUEST</a> <a href="Login/login.php" class="btn btn-primary ml-2">Update Contact Number</a>
             </form>
     </div>
+    
 </body>
 </html>
