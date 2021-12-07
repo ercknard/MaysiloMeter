@@ -109,23 +109,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <form action="sms.php" method="post">
             <div class="form-group">
                 <label>Username</label>
-                <input type="text" name="username" placeholder="Your desired name" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" required oninvalid="this.setCustomValidity('Enter User Name Here')"
+                <input type="text" name="username" placeholder="Your desired name" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" required oninvalid="this.setCustomValidity('Enter Your Username here')"
   oninput="this.setCustomValidity('')">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
             </div>  
             <div class="form-group">
                 <label>Contact Number</label>
-                <input type="text" name="contact" placeholder="09xxxxxxxx" class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>" required>
+                <input type="text" name="contact" placeholder="09xxxxxxxx" class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>" required oninvalid="this.setCustomValidity('Enter Your Contact number here.')"
+  oninput="this.setCustomValidity('')">
                 <span class="invalid-feedback"><?php echo $contact_err; ?></span>
             </div>  
                 <div class="form-group">
                 <label>Password</label>
-                <input type="password" name="password" placeholder="Put at least 6 character password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" required>
+                <input type="password" name="password" placeholder="Put at least 6 character password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" required oninvalid="this.setCustomValidity('Enter a Valid Password.')"
+  oninput="this.setCustomValidity('')">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
                 <label>Confirm Password</label>
-                <input type="password" name="confirm_password" placeholder="Repeat password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" required>
+                <input type="password" name="confirm_password" placeholder="Repeat password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" required oninvalid="this.setCustomValidity('Verify your password here.')"
+  oninput="this.setCustomValidity('')">
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
                 <input value="Register" type="submit" class="btn btn-primary btn-block">
