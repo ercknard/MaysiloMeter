@@ -91,15 +91,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <span class="invalid-feedback"><?php echo $username_err;?></span>
                         </div>
                         <div class="form-group">
-                            <label>Contact</label>
-                            <input type="text" name="contact" class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>">
-                            <span class="invalid-feedback"><?php echo $contact_err;?></span>
-                        </div>
+                            <label>Contact Number</label>
+                            <input type="number" name="contact" placeholder="Enter your 11 digit mobile number." class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>" required oninvalid="this.setCustomValidity('Enter Your Contact number here.')"
+  oninput="this.setCustomValidity('')" maxlength="11" minlength="11" pattern="\d{11}">
+                            <span class="invalid-feedback"><?php echo $contact_err; ?></span>
+                        </div>  
                         <div class="form-group">
                         <label>Purpose: <?=$row['comments']?></label></br>
-                        <input type="radio" name="comments" <?=$row['comments']=="for Registration" ? "checked" : ""?> value="REGISTRATION"> <h6>for Registration.</h6>
+                        <input type="radio" name="comments" <?=$row['comments']=="for Registration" ? "checked" : ""?> value="REGISTRATION"> <b>for Registration.</b>
                         <br>
-                        <input type="radio" name="comments" <?=$row['comments']=="to Update" ? "checked" : ""?> value="UPDATE"> <h6>to Update.</h6>
+                        <input type="radio" name="comments" <?=$row['comments']=="to Update" ? "checked" : ""?> value="UPDATE"> <b>to Update.</b>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
                         <a href="../register.php" class="btn btn-secondary ml-2">Cancel</a>

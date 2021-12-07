@@ -131,7 +131,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   oninput="this.setCustomValidity('')" minlength="6">
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
-                <input value="Register" type="submit" class="btn btn-primary btn-block">
+                <input value="Register" onclick="matchPassword()" type="submit" class="btn btn-primary btn-block">
 
                 <hr color="lightblue" width="100%">
 
