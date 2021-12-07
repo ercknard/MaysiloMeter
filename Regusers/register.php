@@ -88,15 +88,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         .wrapper{ width: 400px; padding: 20px; margin-left: auto; margin-right: auto;}
     </style>
     <script>
-    function onChange() {
-  const password = document.querySelector('input[name=password]');
-  const confirm = document.querySelector('input[name=confirm]');
-  if (confirm.value === password.value) {
-    confirm.setCustomValidity('');
-  } else {
-    confirm.setCustomValidity('Passwords do not match');
+     var check = function() {
+      if (document.getElementById('password').value ==
+          document.getElementById('confirm_password').value) {
+          document.getElementById('message').style.color = 'green';
+          document.getElementById('message').innerHTML = 'matching';
+      } else {
+      		document.getElementById('message').style.color = 'red';
+          document.getElementById('message').innerHTML = 'not matching';
+      }
   }
-}
 </script>
 </head>
 <body>
@@ -130,13 +131,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <div class="form-group">
                 <label>Password</label>
                 <input type="password" name="password" placeholder="Put at least 6 character password." class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" required oninvalid="this.setCustomValidity('Enter a 6 character Password.')"
-  oninput="this.setCustomValidity('')" minlength="6" onChange="onChange()">
+  oninput="this.setCustomValidity('')" minlength="6" onkeyup='check();'>
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
                 <label>Confirm Password</label>
                 <input type="password" name="confirm_password" placeholder="Repeat password." class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" required oninvalid="this.setCustomValidity('Verify your password here.')"
-  oninput="this.setCustomValidity('')" minlength="6" onChange="onChange()">
+  oninput="this.setCustomValidity('')" minlength="6" onkeyup='check();'>
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
                 <input value="Register" type="submit" class="btn btn-primary btn-block">
