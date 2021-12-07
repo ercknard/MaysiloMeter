@@ -86,22 +86,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <script src="new.js"></script>
     <style>
         body{ font: 14px sans-serif; }
-        .wrapper{ width: 400px; padding: 20px; margin-left: auto; margin-right: auto;}
-        input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-}
-
-/* Style the submit button */
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-}
+        .wrapper{ width: 400px; padding: 20px; margin-left: auto; margin-right: auto;}        
 
 /* Style the container for inputs */
 .container {
