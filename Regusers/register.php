@@ -88,14 +88,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         body{ font: 14px sans-serif; }
         .wrapper{ width: 400px; padding: 20px; margin-left: auto; margin-right: auto;}        
 
-/* Style the container for inputs */
-.container {
-  background-color: #f1f1f1;
-  padding: 20px;
-}
 
 /* The message box is shown when the user clicks on the password field */
-#message {
+#message12 {
   display:none;
   background: #f1f1f1;
   color: #000;
@@ -104,7 +99,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   margin-top: 10px;
 }
 
-#message p {
+#message12 p {
   padding: 10px 35px;
   font-size: 18px;
 }
@@ -164,10 +159,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <div class="form-group">
                 <label>Password</label>
                 <input type="password" id="password" name="password" placeholder="Put at least 6 character password." class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" required oninvalid="this.setCustomValidity('Enter a valid password.')"
-  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onkeyup='check();'>
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
-            <div id="message">
+            <div id="message12">
   <b>Password must contain the following:</b>
   <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
   <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
@@ -177,7 +172,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <label>Confirm Password</label>
                 <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat password." class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" required oninvalid="this.setCustomValidity('Please make sure your passwords match.')"
-  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onkeyup='check();'>
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
                 <input value="Register" type="submit" class="btn btn-primary btn-block">
