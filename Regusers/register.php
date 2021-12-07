@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $contact = trim($_POST["contact"]);
     }
 
-    // Validate confirm password
+    // Validate confirm password11
     if(empty(trim($_POST["confirm_password"]))){
         $confirm_password_err = "Please confirm password.";     
     } else{
