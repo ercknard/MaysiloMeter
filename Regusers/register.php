@@ -11,7 +11,7 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style>
         body{ font: 14px sans-serif; }
-        .wrapper{ width: 400px; padding: 20px; margin-left: auto; margin-right: auto;}        
+        .wrapper{ width: 500px; padding: 20px; margin-left: auto; margin-right: auto;}        
 /* Style all input fields */
 
 /* Style the container for inputs */
@@ -87,7 +87,7 @@ session_start();
             </div>  
                 <div class="form-group">
                 <label>Password</label>
-                <input type="password" id="password" name="password" placeholder="Put at least 6 character password." class="form-control" required oninvalid="this.setCustomValidity('Enter a valid password.')"
+                <input type="password" id="password" name="password" placeholder="Put a valid password." class="form-control" required oninvalid="this.setCustomValidity('Enter a valid password.')"
   oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" >
             </div>
             <div id="message12">

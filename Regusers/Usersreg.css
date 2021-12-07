@@ -9,9 +9,9 @@
 .u-section-1 .u-custom-html-1 {
   min-height: 800px;
   background-image: linear-gradient(to right, #478ac9, #adf6f2);
-  margin-top: 30px;
-  margin-bottom: 30px;
   height: auto;
+  width: 500px;
+  margin: 30px auto;
 }
 
 @media (max-width: 1199px) {
@@ -21,5 +21,11 @@
 
   .u-section-1 .u-custom-html-1 {
     min-height: 719px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-custom-html-1 {
+    width: 340px;
   }
 }
