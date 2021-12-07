@@ -109,11 +109,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <form action="sms.php" method="post">
             <div class="form-group">
                 <label>Username</label>
-                <input type="text" name="username" placeholder="Your desired name" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" required>
+                <input type="text" name="username" placeholder="Your desired name" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>" required oninvalid="this.setCustomValidity('Enter User Name Here')"
+  oninput="this.setCustomValidity('')">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
             </div>  
             <div class="form-group">
-                <label>Contact</label>
+                <label>Contact Number</label>
                 <input type="text" name="contact" placeholder="09xxxxxxxx" class="form-control <?php echo (!empty($contact_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $contact; ?>" required>
                 <span class="invalid-feedback"><?php echo $contact_err; ?></span>
             </div>  
