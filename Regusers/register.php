@@ -121,13 +121,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <div class="form-group">
                 <label>Password</label>
                 <input type="password" id="password" name="password" placeholder="Put at least 6 character password." class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" required oninvalid="this.setCustomValidity('Enter a 6 character Password.')"
-  oninput="this.setCustomValidity('')" minlength="6">
+  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
+            <div id="message">
+  <h4>Password must contain the following:</h4>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
             <div class="form-group">
                 <label>Confirm Password</label>
                 <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat password." class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" required oninvalid="this.setCustomValidity('Verify your password here.')"
-  oninput="this.setCustomValidity('')" minlength="6">
+  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
                 <input value="Register" type="submit" class="btn btn-primary btn-block">
