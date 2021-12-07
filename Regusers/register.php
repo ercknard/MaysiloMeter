@@ -183,11 +183,11 @@ input[type=submit] {
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
             <div id="message">
-  <h4>Password must contain the following:</h4>
+  <b>Password must contain the following:</b>
   <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
   <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
   <p id="number" class="invalid">A <b>number</b></p>
-  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+  <p id="length" class="invalid">Minimum <b>6 characters</b></p>
 </div>
             <div class="form-group">
                 <label>Confirm Password</label>
