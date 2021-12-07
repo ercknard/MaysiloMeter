@@ -1,4 +1,4 @@
-var myInput = document.getElementById("psw");
+var myInput = document.getElementById("password");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
@@ -47,7 +47,7 @@ myInput.onkeyup = function() {
   }
   
   // Validate length
-  if(myInput.value.length >= 8) {
+  if(myInput.value.length >= 6) {
     length.classList.remove("invalid");
     length.classList.add("valid");
   } else {

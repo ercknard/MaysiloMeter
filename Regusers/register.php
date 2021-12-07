@@ -176,7 +176,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </div>
             <div class="form-group">
                 <label>Confirm Password</label>
-                <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat password." class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" required oninvalid="this.setCustomValidity('Verify your password here.')"
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat password." class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>" required oninvalid="this.setCustomValidity('Please make sure your passwords match.')"
   oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
                 <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
             </div>
