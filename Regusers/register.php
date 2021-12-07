@@ -163,7 +163,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>  
                 <div class="form-group">
                 <label>Password</label>
-                <input type="password" id="password" name="password" placeholder="Put at least 6 character password." class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" required oninvalid="this.setCustomValidity('Enter a 6 character Password.')"
+                <input type="password" id="password" name="password" placeholder="Put at least 6 character password." class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>" required oninvalid="this.setCustomValidity('Enter a valid password.')"
   oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div>
