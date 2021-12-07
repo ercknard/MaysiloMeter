@@ -1,10 +1,13 @@
-function matchPassword() {  
-    var pw1 = document.getElementById("password");  
-    var pw2 = document.getElementById("confirm_password");  
-    if(pw1 != pw2)  
-    {   
-      alert("Passwords did not match");  
-    } else {  
-      alert("Password created successfully");  
-    }  
-  }  
+var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
