@@ -4,7 +4,7 @@ session_start();
 $code = getRandomCode();
 $username = $_POST['username'];
 $contact = $_POST['contact'];
-$pssword = $_POST['password'];
+$password = $_POST['password'];
 
 
 
