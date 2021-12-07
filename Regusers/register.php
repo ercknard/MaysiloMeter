@@ -11,7 +11,7 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style>
         body{ font: 14px sans-serif; }
-        .wrapper{ width: 500px; padding: 20px; margin-left: auto; margin-right: auto;}        
+        .wrapper{ width: 465px; padding: 20px; margin-left: auto; margin-right: auto;}        
 /* Style all input fields */
 
 /* Style the container for inputs */
@@ -88,7 +88,7 @@ session_start();
                 <div class="form-group">
                 <label>Password</label>
                 <input type="password" id="password" name="password" placeholder="Put a valid password." class="form-control" required oninvalid="this.setCustomValidity('Enter a valid password.')"
-  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" >
+  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onkeyup='check();'>
             </div>
             <div id="message12">
             <b>Password must contain the following:</b>
@@ -101,7 +101,9 @@ session_start();
             <div class="form-group">
                 <label>Confirm Password</label>
                 <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat password." class="form-control" required oninvalid="this.setCustomValidity('Please make sure your passwords match.')"
-  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" >
+  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onkeyup='check();'>
+  <br>
+  <span id='message13'></span>
             </div>
                 <input value="Register" type="submit" class="btn btn-primary btn-block">
 
@@ -170,6 +172,17 @@ myInput.onkeyup = function() {
     length.classList.add("invalid");
   }
 }
+
+var check = function() {
+      if (document.getElementById('password').value ==
+          document.getElementById('confirm_password').value) {
+          document.getElementById('message13').style.color = 'green';
+          document.getElementById('message13').innerHTML = 'Password Matched';
+      } else {
+      		document.getElementById('message13').style.color = 'red';
+          document.getElementById('message13').innerHTML = 'Password needs to be the same';
+      }
+  }
 </script>
 </body>
 </html>

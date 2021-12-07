@@ -1,7 +1,7 @@
 <?php  
 
 
-//open connection to mysql db
+//open connection to mysql db//
 $con = mysqli_connect("us-cdbr-east-04.cleardb.com","b64914f07d5e65","f742c533","heroku_5142987c57081aa") or die("Error " . mysqli_error($con));
 
 $limit = 10;

@@ -16,7 +16,7 @@ $con = mysqli_connect("us-cdbr-east-04.cleardb.com","b64914f07d5e65","f742c533",
     //determine the sql LIMIT starting number for the results on the displaying page  
     $page_index = ($page-1) * $limit;      // 0
 
-    $All_Users=mysqli_query($con,"select * from tblusers limit $page_index, $limit");
+    $All_Users=mysqli_query($con,"select contacts from tblusers limit $page_index, $limit");
     
     $mirmo = array();
     while($row=mysqli_fetch_assoc($All_Users))
