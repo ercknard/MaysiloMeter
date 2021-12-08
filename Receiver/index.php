@@ -28,13 +28,12 @@ $count++;
                 } else {
                     $cactus .= $row["contact"]."|"; 
                  }
-               
         }
 
     } else {
         echo "0 results";
     }
     
-    echo $cactus;
+    echo "#" . $cactus;
         mysqli_close($con);
 ?>
