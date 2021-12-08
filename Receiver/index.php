@@ -17,14 +17,15 @@ $con = mysqli_connect("us-cdbr-east-04.cleardb.com","b64914f07d5e65","f742c533",
     $page_index = ($page-1) * $limit;      // 0
 
     $result=mysqli_query($con,"select contact from tblusers limit $page_index, $limit");
-    
+
     if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            $meow = $row["contact"]. "|";
-            $cat = preg_replace("/\|$/", "", $meow);
+        while($row = $result->fetch_array()) {
+                $cactus = $row["contact"]."|";
+                echo $cactus;
+                
+
         }
 
-        echo $cat;
     } else {
         echo "0 results";
     }
