@@ -1,5 +1,3 @@
-
-
 <?php  
 
 
@@ -17,27 +15,26 @@ $con = mysqli_connect("us-cdbr-east-04.cleardb.com","b64914f07d5e65","f742c533",
     $page_index = ($page-1) * $limit;      // 0
 
     $result=mysqli_query($con,"select contact from tblusers limit $page_index, $limit");
-
+    $cactus = "";
     if ($result->num_rows > 0) {
-        while($row = $result->fetch_array()) {
-                $cactus = $row["contact"]."|";
-                echo $cactus;
-                
+       $count = 0;
+       while($row = $result->fetch_assoc()) {
 
+$count++;
+
+                if ($count == $result->num_rows) {
+
+                    $cactus .= $row["contact"];
+                } else {
+                    $cactus .= $row["contact"]."|"; 
+                 }
+               
         }
 
     } else {
         echo "0 results";
     }
     
-    //$mirmo = array();
-    //while($row=mysqli_fetch_assoc($All_Users))
-    //{
-    //   $mirmo[] = $row;
-    //}
-    //header('Content-Type: txt; charset=utf-8');
-    //echo json_encode($mirmo);   
-
-        //close the db connections
+    echo $cactus;
         mysqli_close($con);
 ?>
