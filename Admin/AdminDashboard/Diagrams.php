@@ -108,9 +108,10 @@ body {
                         <a href="../welcome.php" class="btn btn-primary pull-right ml-2">Back</a>
                     </div>
 
-                    <iframe width="420px" height="400px" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/p3U4z_iXN9hVQW8cNvudfDosppSxQmH3d40GjKWcAuY?embed=true"></iframe>
-                        <iframe width="420px" height="400px" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/ZfaeOHgpncrcSSDQ78hQyjIe-Q6TSKSh_O4BGogxKbk?embed=true"></iframe>
-                    
+                    <iframe width="430px" height="400px" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/p3U4z_iXN9hVQW8cNvudfDosppSxQmH3d40GjKWcAuY?embed=true"></iframe>
+                        <h3> Water Guage : Lorem Ipsum </h3>
+                        <iframe width="430px" height="400px" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/ZfaeOHgpncrcSSDQ78hQyjIe-Q6TSKSh_O4BGogxKbk?embed=true"></iframe>
+                            <h3> Meter Guage : Lorem Ipsum </h3>
 
                     </div>
             </div>        
