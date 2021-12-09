@@ -306,7 +306,7 @@
   font-family: "Titillium Web", sans-serif;
   font-size: 1.125rem;
   text-shadow: 2px 2px 8px rgba(128,128,128,1);
-  margin: 31px 251px 0 252px;
+  margin: 31px 239px 0 252px;
 }
 
 .u-section-3 .u-text-2 {
@@ -338,7 +338,7 @@
   .u-section-3 .u-text-1 {
     width: 637px;
     margin-left: 152px;
-    margin-right: 151px;
+    margin-right: 139px;
   }
 
   .u-section-3 .u-text-2 {
@@ -355,7 +355,7 @@
 @media (max-width: 991px) {
   .u-section-3 .u-text-1 {
     margin-left: 42px;
-    margin-right: 41px;
+    margin-right: 29px;
   }
 
   .u-section-3 .u-text-2 {
