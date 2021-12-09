@@ -80,6 +80,12 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+.iframe {
+    display:block;
+}
+.h5 {
+    text-align: center;
+}
 </style>
 </head>
 <body>
@@ -107,12 +113,10 @@ body {
                         <h2 class="pull-left">Diagrams      </h2>
                         <a href="../welcome.php" class="btn btn-primary pull-right ml-2">Back</a>
                     </div>
-
-                    <iframe margin="auto" width="430px" height="400px" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/p3U4z_iXN9hVQW8cNvudfDosppSxQmH3d40GjKWcAuY?embed=true"></iframe>
-                        <h3> Water Guage : Lorem Ipsum </h3>
-                        <iframe width="430px" height="400px" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/ZfaeOHgpncrcSSDQ78hQyjIe-Q6TSKSh_O4BGogxKbk?embed=true"></iframe>
-                            <h3> Meter Guage : Lorem Ipsum </h3>
-
+                    <h5> Water Guage :</h5>
+                    <iframe width="430px" height="400px" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/p3U4z_iXN9hVQW8cNvudfDosppSxQmH3d40GjKWcAuY?embed=true"></iframe>
+                    <h5> Meter Guage :</h5>
+                    <iframe width="430px" height="400px" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/ZfaeOHgpncrcSSDQ78hQyjIe-Q6TSKSh_O4BGogxKbk?embed=true"></iframe>
                     </div>
             </div>        
         </div>
