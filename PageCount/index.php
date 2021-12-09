@@ -10,7 +10,6 @@ $user_count = mysqli_fetch_row($result);   // say total count 9
 $total_records = $user_count[0];   //9
 $total_pages = ceil($total_records / $limit);
 
-header('Content-Type: application/json; charset=utf-8');
 echo "#" . $total_pages . "*";   // 9/3=  3
 
 
