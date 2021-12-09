@@ -11,7 +11,7 @@ $total_records = $user_count[0];   //9
 $total_pages = ceil($total_records / $limit);
 
 header('Content-Type: application/json; charset=utf-8');
-echo json_encode($total_pages);   // 9/3=  3
+echo "#" . $total_pages . "*";   // 9/3=  3
 
 
     //close the db connections
