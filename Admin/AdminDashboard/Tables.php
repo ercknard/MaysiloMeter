@@ -108,7 +108,7 @@ body {
                         <a href="../welcome.php" class="btn btn-primary pull-right ml-2">Back</a>
                     </div>
 
-                    nothing to show here!!!
+                    <iframe width="100%" height="500px" frameborder="0" src=" https://industrial.ubidots.com/app/dashboards/public/widget/cU7-eXStHQLpdBo3Ia-PR66BGkE5DONqBay2X6pf_Bk?embed=true"></iframe>
 
                     </div>
             </div>        

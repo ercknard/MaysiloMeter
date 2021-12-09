@@ -297,7 +297,6 @@
 
 .u-section-3 .u-custom-html-1 {
   min-height: 1011px;
-  height: auto;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -307,8 +306,7 @@
   font-family: "Titillium Web", sans-serif;
   font-size: 1.125rem;
   text-shadow: 2px 2px 8px rgba(128,128,128,1);
-  width: 637px;
-  margin: 31px 252px 0;
+  margin: 31px 251px 0 252px;
 }
 
 .u-section-3 .u-text-2 {
@@ -333,9 +331,14 @@
 }
 
 @media (max-width: 1199px) {
+  .u-section-3 .u-custom-html-1 {
+    height: auto;
+  }
+
   .u-section-3 .u-text-1 {
+    width: 637px;
     margin-left: 152px;
-    margin-right: 152px;
+    margin-right: 151px;
   }
 
   .u-section-3 .u-text-2 {
@@ -352,7 +355,7 @@
 @media (max-width: 991px) {
   .u-section-3 .u-text-1 {
     margin-left: 42px;
-    margin-right: 42px;
+    margin-right: 41px;
   }
 
   .u-section-3 .u-text-2 {
