@@ -80,11 +80,13 @@ body {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-.iframe {
-    display:block;
+iframe {
+    margin-left: auto;
+    margin-right: auto;
 }
-.h5 {
-    text-align: center;
+h5 {
+    margin-left: auto;
+    margin-right: auto;
 }
 </style>
 </head>
