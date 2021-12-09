@@ -118,9 +118,9 @@ h5 {
                     <p align="center">
                     <center>
                     <h5> Water Guage :</h5>
-                    <iframe width="400px" height="400px" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/p3U4z_iXN9hVQW8cNvudfDosppSxQmH3d40GjKWcAuY?embed=true"></iframe>
+                    <iframe width="auto" height="auto" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/p3U4z_iXN9hVQW8cNvudfDosppSxQmH3d40GjKWcAuY?embed=true"></iframe>
                     <h5> Meter Guage :</h5>
-                    <iframe width="400px" height="400px" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/ZfaeOHgpncrcSSDQ78hQyjIe-Q6TSKSh_O4BGogxKbk?embed=true"></iframe>
+                    <iframe width="auto" height="400px" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/ZfaeOHgpncrcSSDQ78hQyjIe-Q6TSKSh_O4BGogxKbk?embed=true"></iframe>
                     </center>
                     </p>
                     </div>
