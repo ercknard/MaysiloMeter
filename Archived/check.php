@@ -1,6 +1,18 @@
 <?php
 session_start();
-require_once('database.php');
+
+$servername = "us-cdbr-east-04.cleardb.com";
+$username = "b64914f07d5e65";
+$password = "f742c533";
+$dbname = "heroku_5142987c57081aa";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+
 $inputtedCode = $_POST['code'];
 
 $correctCode = $_SESSION['otp'];
@@ -25,7 +37,7 @@ if($inputtedCode == $correctCode){
         $_SESSION['message'] = 'Something is wrong!';
     }
 
-    header('location: index.php');
+    header('location: reg.php');
     // $user = $pdo->prepare("INSERT INTO tblusers ('username', 'password', 'contact') VALUES (?, ?, ?)");
     // // Positional Parameter
     // $user->execute([$username, $password, $contact])
