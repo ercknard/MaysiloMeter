@@ -31,19 +31,7 @@
   font-size: 0.9375rem;
   letter-spacing: 1px;
   box-shadow: 0px 2px 6px 0 rgba(0,0,0,0.25);
-  margin: 22px 240px 0 auto;
-  padding: 8px 36px 9px 35px;
-}
-
-.u-section-1 .u-btn-2 {
-  background-image: linear-gradient(to right, #478ac9, #2cccc4);
-  border-style: none;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.9375rem;
-  letter-spacing: 1px;
-  box-shadow: 0px 2px 6px 0 rgba(0,0,0,0.25);
-  margin: -41px auto 22px 242px;
+  margin: 22px 240px 22px auto;
   padding: 8px 36px 9px 35px;
 }
 
@@ -70,31 +58,19 @@
   .u-section-1 .u-btn-1 {
     margin-right: 89px;
   }
-
-  .u-section-1 .u-btn-2 {
-    margin-left: 89px;
-  }
 }
 
 @media (max-width: 991px) {
   .u-section-1 .u-btn-1 {
     margin-top: 24px;
     margin-right: 22px;
-  }
-
-  .u-section-1 .u-btn-2 {
-    margin-top: -43px;
-    margin-left: 22px;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 767px) {
   .u-section-1 .u-btn-1 {
     margin-right: 0;
-  }
-
-  .u-section-1 .u-btn-2 {
-    margin-left: 0;
   }
 }
 
@@ -125,12 +101,7 @@
   .u-section-1 .u-btn-1 {
     margin-top: 20px;
     margin-right: auto;
-  }
-
-  .u-section-1 .u-btn-2 {
-    margin-top: 22px;
-    margin-left: auto;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
 } .u-section-2 {
   background-image: linear-gradient(to right, #478ac9, #adf6f2);
