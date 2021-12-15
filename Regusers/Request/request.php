@@ -67,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             }
         }
          
-        // Close statement
+        // Close statement22
         mysqli_stmt_close($stmt);
     }
     
