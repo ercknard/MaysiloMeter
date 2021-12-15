@@ -118,11 +118,11 @@ h5 {
                     <p align="center">
                     <center>
                     <h5> Meter Guage :</h5>
-                    <iframe width="500" height="423px" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/ZfaeOHgpncrcSSDQ78hQyjIe-Q6TSKSh_O4BGogxKbk?embed=true"></iframe>
+                    <iframe width="500" height="423px" frameborder="1px" src="https://industrial.ubidots.com/app/dashboards/public/widget/xpCMVYtE89TgwIMWL1GUFlPlMbwkBbd3k2517wI8SFg?embed=true"></iframe>
                         <hr color="lightblue" width="100%">
                         
                         <h5> Water Guage :</h5>
-                    <iframe width="423" height="423" frameborder="1px" src=" https://industrial.ubidots.com/app/dashboards/public/widget/p3U4z_iXN9hVQW8cNvudfDosppSxQmH3d40GjKWcAuY?embed=true"></iframe>
+                    <iframe width="423" height="423" frameborder="1px" src="https://industrial.ubidots.com/app/dashboards/public/widget/kLD5Q2KHMZCzoyeNsaYk6uN5NOt5e_qmczwV64-Cci0?embed=true"></iframe>
                     </center>
                     </p>
                     </div>
