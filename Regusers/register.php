@@ -113,7 +113,7 @@ session_start();
 
                 <p>If the registration fails. Submit a request to ADMIN by clicking the REQUEST button below. <br> <b> NOTE : All inputs are confidential. </b></p>
 
-                <a href="Request/requesst.php" class="btn btn-secondary ml-2">REQUEST</a> <a href="Login/login.php" class="btn btn-primary ml-2">Update Contact Number</a>
+                <a href="requesst.php" class="btn btn-secondary ml-2">REQUEST</a> <a href="Login/login.php" class="btn btn-primary ml-2">Update Contact Number</a>
             </form>
     </div>
 <script>
