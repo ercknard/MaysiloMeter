@@ -107,6 +107,7 @@ body {
                         <a href="../welcome.php" class="btn btn-primary pull-right ml-2">Back</a>
                     </div>
                     <iframe width="100%" height="500px" name="frame" frameborder="0" src="https://industrial.ubidots.com/app/dashboards/public/widget/EIGS2UEfLeWZQZUCri6sSqHRx0wAdnReN1p7SCnJH5A?embed=true"></iframe>
+                        <input type="button" onclick="frames['frame'].print()" value="printletter">
                     </div>
                     <div class="form-group">
                     <a href="#" class="btn btn-primary" onclick="frames['frame'].print()">Print all</a>
