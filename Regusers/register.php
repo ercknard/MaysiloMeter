@@ -111,9 +111,9 @@ session_start();
 
                 <hr color="lightblue" width="100%">
 
-                <p>If the registration fails. Submit a request to ADMIN by clicking the REQUEST button below. <br> <b> NOTE : All inputs are confidential. </b></p>
+                <p>For contact number update click the button below. <br> <b> NOTE : All inputs are confidential. </b></p>
 
-                <a href="Login/login.php" class="btn btn-primary ml-2">Update Contact Number</a>
+                <a href="Login/login.php" class="btn btn-primary">Update Contact Number</a>
             </form>
     </div>
 <script>
