@@ -18,6 +18,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen"></style>
+    <style type="text/css" media="print">
+div {
+display:none;
+}
+.printable {
+display:block;
+}
+</style>
     <style>
         .wrapper{
             width: 850px;
@@ -106,9 +115,9 @@ body {
                         <h2 class="pull-left">Tables      </h2>
                         <a href="../welcome.php" class="btn btn-primary pull-right ml-2">Back</a>
                     </div>
-
+                    <div class="printable">
                     <iframe width="100%" height="500px" frameborder="0" src="https://industrial.ubidots.com/app/dashboards/public/widget/EIGS2UEfLeWZQZUCri6sSqHRx0wAdnReN1p7SCnJH5A?embed=true"></iframe>
-
+                    </div>
                     </div>
                     <div class="form-group">
                     <a href="https://industrial.ubidots.com/app/dashboards/public/widget/EIGS2UEfLeWZQZUCri6sSqHRx0wAdnReN1p7SCnJH5A?embed=true" class="btn btn-primary" onclick="window.print();return false;">Print all</a>
