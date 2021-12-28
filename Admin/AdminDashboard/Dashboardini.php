@@ -121,7 +121,7 @@ body {
                                         echo "<th>Name</th>";
                                         echo "<th>Contact</th>";
                                         echo "<th>Time Created</th>";
-                                        echo "<th>Option</th>";
+                                        echo "<th>View</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
