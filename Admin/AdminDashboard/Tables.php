@@ -111,7 +111,7 @@ body {
 
                     </div>
                     <div class="form-group">
-                    <a href="#" class="btn btn-primary" onclick="window.print();return false;">Print all</a>|
+                    <a href="#" class="btn btn-primary" onclick="window.print();return false;">Print all</a>
                     </div>
             </div>        
         </div>
