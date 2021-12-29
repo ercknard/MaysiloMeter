@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
-                    <img class="img-responsive center-block d-block mx-auto" src="/images/banner.png" width="300px" height="120px">
+                    <img class="img-responsive center-block d-block mx-auto" src="/images/banner.png" width="309px" height="104px">
                     <hr color="lightblue" width="100%">
                         <h2 class="pull-left">Table      </h2>
                     </div>
