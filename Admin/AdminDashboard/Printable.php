@@ -5,7 +5,7 @@
 </head>
 <style>
     body{
-        background-image: url(https://i.natgeofe.com/k/a2a738a9-e019-4911-98e6-17f31c45ac88/milky-way-2_2x1.jpg);
+        background-image: linear-gradient(to right, Blue, light blue);
     }
         .wrapper{
             width: 950px;
