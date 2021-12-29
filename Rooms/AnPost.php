@@ -11,7 +11,7 @@
     <style>
         .wrapper{
             width: 850px;
-            margin-left: 250px;
+            margin: auto;
         }
         table tr td:last-child{
             width: 120px;
