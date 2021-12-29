@@ -184,7 +184,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <label>Announcement Content</label>
                             <textarea type="text" name="content" placeholder="Content will be type here." class="form-control <?php echo (!empty($content_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $content; ?>" required oninvalid="this.setCustomValidity('Post Something here!!')"
   oninput="this.setCustomValidity('')">
-                            <span class="invalid-feedback"><?php echo $content_err; ?></span>
                         </div>  
                         <div class="form-group">
                         <label>Post Type :<?=$row['updates']?></label></br>
