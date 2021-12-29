@@ -186,7 +186,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <br>
                         <input type="radio" name="updates" <?=$row['updates']=="Article" ? "checked" : ""?> value="ARTICLE"> <b>Article.</b>
                         </div>
-                        <input type="submit" class="btn btn-primary" value="Post Announcement">
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                        <a href="Dashboardini.php" class="btn btn-secondary ml-2">Cancel</a>
                     </form>      
 
                     </div>
