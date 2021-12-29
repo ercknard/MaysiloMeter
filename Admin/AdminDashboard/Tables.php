@@ -110,7 +110,7 @@ body {
                     </div>
                     <div class="form-group">
                         <p> Print whole records into PDF file. </p>
-                    <a href="https://industrial.ubidots.com/app/dashboards/public/widget/EIGS2UEfLeWZQZUCri6sSqHRx0wAdnReN1p7SCnJH5A?embed=true" class="btn btn-primary" onclick="window.print();return false;">Print all</a>
+                    <a href="Printable.php" class="btn btn-primary" onclick="window.print();return false;">Print all</a>
                     </div>
             </div>        
         </div>
