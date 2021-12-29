@@ -16,7 +16,7 @@ session_start();
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         .wrapper{
-            width: 850px;
+            width: 950px;
             margin: auto;
         }
         table tr td:last-child{
@@ -53,6 +53,7 @@ session_start();
                                         echo "<th>#</th>";
                                         echo "<th>Announcement</th>";
                                         echo "<th>Author</th>";
+                                        echo "<th>Post type:</th>";
                                         echo "<th>Date</th>";
                                     echo "</tr>";
                                 echo "</thead>";
@@ -61,8 +62,9 @@ session_start();
                                     echo "<tr>";
                                         echo "<td>" . $row['id'] . "</td>";
                                         echo "<td>" . $row['content'] . "</td>";
-                                        echo "<td>" . "Author : ". $row['contact'] . "</td>";
-                                        echo "<td>" . "Date : ". $row['created_at'] . "</td>";
+                                        echo "<td>" . $row['adminName'] . "</td>";
+                                        echo "<td>" . $row['updates'] . "</td>";
+                                        echo "<td>" . $row['created_at'] . "</td>";
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";                            
