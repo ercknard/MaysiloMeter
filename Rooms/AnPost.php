@@ -50,21 +50,20 @@ session_start();
                             echo '<table class="table table-bordered table-striped">';
                                 echo "<thead>";
                                     echo "<tr>";
-                                        echo "<th>#</th>";
                                         echo "<th>Announcement</th>";
                                         echo "<th>Author</th>";
-                                        echo "<th>Post type:</th>";
+                                        echo "<th>Post type</th>";
                                         echo "<th>Date</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
-                                        echo "<td>" . $row['id'] . "</td>";
+                                        echo "<td>" . $row['created_at'] . "</td>";
                                         echo "<td>" . $row['content'] . "</td>";
                                         echo "<td>" . $row['adminName'] . "</td>";
                                         echo "<td>" . $row['updates'] . "</td>";
-                                        echo "<td>" . $row['created_at'] . "</td>";
+
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";                            
