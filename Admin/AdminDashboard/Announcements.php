@@ -82,8 +82,8 @@ body {
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$adminName = $content = $update = "";
-$adminName_err = $content_err = $update_err = "";
+$adminName = $content = $updates = "";
+$adminName_err = $content_err = $updates_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -106,22 +106,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
         // Validate content
-        $input_update = trim($_POST["update"]);
-        $update = $input_update;
+        $input_updates = trim($_POST["updates"]);
+        $updates = $input_updates;
     
     // Check input errors before inserting in database
     if(empty($adminName_err) && empty($content_err)){
         // Prepare an insert statement
-        $sql = "INSERT INTO announcements (adminName, content, update) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO announcements (adminName, content, updates) VALUES (?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "sss", $param_adminName, $param_content, $param_update);
+            mysqli_stmt_bind_param($stmt, "sss", $param_adminName, $param_content, $param_updates);
             
             // Set parameters
             $param_adminName = $adminName;
             $param_content = $content;
-            $param_update = $update;
+            $param_updates = $updates;
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
@@ -181,10 +181,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <span class="invalid-feedback"><?php echo $content_err; ?></span>
                         </div>  
                         <div class="form-group">
-                        <label>Post Type :<?=$row['update']?></label></br>
-                        <input type="radio" name="update" <?=$row['update']=="Announcement" ? "checked" : ""?> value="ANNOUNCEMENT"> <b>Announcement.</b>
+                        <label>Post Type :<?=$row['updates']?></label></br>
+                        <input type="radio" name="updates" <?=$row['updates']=="Announcement" ? "checked" : ""?> value="ANNOUNCEMENT"> <b>Announcement.</b>
                         <br>
-                        <input type="radio" name="update" <?=$row['update']=="Article" ? "checked" : ""?> value="ARTICLE"> <b>Article.</b>
+                        <input type="radio" name="updates" <?=$row['updates']=="Article" ? "checked" : ""?> value="ARTICLE"> <b>Article.</b>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Post Announcement">
                     </form>      
