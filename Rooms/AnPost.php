@@ -30,8 +30,7 @@
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                     <hr color="lightblue" width="100%">
-                        <h2 class="pull-left">Flood O' Meter Announcements</h2>
-                        <hr color="lightblue" width="100%">
+                        <h4 class="pull-left">Flood O' Meter Announcements</h4>
                     </div>
                     <?php
                     // Include config file
@@ -61,7 +60,7 @@
                             // Free result set
                             mysqli_free_result($result);
                         } else{
-                            echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+                            echo '<div class="alert alert-danger"><em>No Announcements were found.</em></div>';
                         }
                     } else{
                         echo "Oops! Something went wrong. Please try again later.";
