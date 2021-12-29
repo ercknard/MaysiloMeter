@@ -5,7 +5,7 @@
 </head>
 <style>
     body{
-        background-image: linear-gradient(to right, Blue, light blue);
+        background-color: lightblue;
     }
         .wrapper{
             width: 950px;
