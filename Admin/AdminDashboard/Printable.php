@@ -4,6 +4,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <style>
+    body{
+        background-image: url(https://i.natgeofe.com/k/a2a738a9-e019-4911-98e6-17f31c45ac88/milky-way-2_2x1.jpg);
+    }
         .wrapper{
             width: 950px;
             margin: auto;
@@ -12,6 +15,7 @@
             width: 120px;
         }
     </style>
+    <body>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
@@ -21,9 +25,10 @@
                     <hr color="lightblue" width="100%">
                         <h2 class="pull-left">Table      </h2>
                     </div>
-                    <iframe width="100%" height="550px" frameborder="1" src="https://industrial.ubidots.com/app/dashboards/public/widget/EIGS2UEfLeWZQZUCri6sSqHRx0wAdnReN1p7SCnJH5A?embed=true"></iframe>
+                    <iframe width="100%" height="550px" frameborder="0" src="https://industrial.ubidots.com/app/dashboards/public/widget/EIGS2UEfLeWZQZUCri6sSqHRx0wAdnReN1p7SCnJH5A?embed=true"></iframe>
                     </div>
                     <div class="form-group">
+                        <br>
                     <p> Click the button below to generate PDF file </p>
                         <a href="Printable.php" class="btn btn-primary" onclick="window.print();return false;">Export as PDF</a>
                     </div>
