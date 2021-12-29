@@ -44,13 +44,16 @@ session_start();
                     require_once "config.php";
                     
                     // Attempt select query execution
-                    $sql = "SELECT * FROM announcements";
+                    $sql = "SELECT * FROM announcements ORDER BY created_at DESC";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo '<table class="table table-bordered table-striped">';
                                 echo "<thead>";
                                     echo "<tr>";
-                                        echo "<th>Announcements</th>";
+                                        echo "<th>#</th>";
+                                        echo "<th>Announcement</th>";
+                                        echo "<th>Author</th>";
+                                        echo "<th>Date</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
