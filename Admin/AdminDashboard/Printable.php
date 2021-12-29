@@ -21,11 +21,11 @@
                     <hr color="lightblue" width="100%">
                         <h2 class="pull-left">Table      </h2>
                     </div>
-                    <iframe width="100%" height="550px" frameborder="0" src="https://industrial.ubidots.com/app/dashboards/public/widget/EIGS2UEfLeWZQZUCri6sSqHRx0wAdnReN1p7SCnJH5A?embed=true"></iframe>
+                    <iframe width="100%" height="550px" frameborder="1" src="https://industrial.ubidots.com/app/dashboards/public/widget/EIGS2UEfLeWZQZUCri6sSqHRx0wAdnReN1p7SCnJH5A?embed=true"></iframe>
                     </div>
                     <div class="form-group">
                     <p> Click the button below to generate PDF file </p>
-                        <a href="Printable.php" class="btn btn-primary" onclick="window.print();return false;">Print</a>
+                        <a href="Printable.php" class="btn btn-primary" onclick="window.print();return false;">Export as PDF</a>
                     </div>
             </div>        
         </div>
