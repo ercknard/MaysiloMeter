@@ -31,6 +31,7 @@ session_start();
 </head>
 <body>
 <div class="wrapper">
+<img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
