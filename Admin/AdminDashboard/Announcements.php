@@ -178,7 +178,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <div class="form-group">
                             <label>Author Name</label>
                             <input type="text" name="adminName" placeholder="Enter author name" class="form-control <?php echo (!empty($adminName_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $adminName; ?>">
-                            <span class="invalid-feedback"><?php echo $adminName_err;?></span>
+                            <span class="invalid-feedback"><?php echo htmlspecialchars($_SESSION["username"]); ?><?php echo $adminName_err;?></span>
                         </div>
                         <div class="form-group">
                             <label>Announcement Content</label>
