@@ -55,6 +55,10 @@
 
 .u-section-1 .u-shape-1.u-shape-1.u-shape-1:hover {
   transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
+}
+
+.u-section-1 .u-shape-1.u-shape-1.u-shape-1.hover {
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px) !important;
 }.u-section-2 .u-sheet-1 {
   min-height: 256px;
 }
