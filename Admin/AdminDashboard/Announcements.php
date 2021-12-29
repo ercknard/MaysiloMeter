@@ -89,7 +89,7 @@ $adminName_err = $content_err = $updates_err = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validate username
     $input_adminName = trim($_POST["adminName"]);
-    if(empty($input_adminNames)){
+    if(empty($input_adminName)){
         $adminName_err = "Please enter a username.";
     } elseif(!filter_var($input_adminName, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/^[a-zA-Z\s]+$/")))){
         $adminName_err = "Please enter a valid username.";
