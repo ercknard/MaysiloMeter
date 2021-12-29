@@ -177,7 +177,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
                             <label>Author Name</label>
-                            <input type="text" name="adminName" hint="<?php echo htmlspecialchars($_SESSION["username"]); ?>" class="form-control <?php echo (!empty($adminName_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $adminName; ?>">
+                            <input type="text" name="adminName" placeholder="Enter author name" class="form-control <?php echo (!empty($adminName_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $adminName; ?>">
                             <span class="invalid-feedback"><?php echo $adminName_err;?></span>
                         </div>
                         <div class="form-group">
