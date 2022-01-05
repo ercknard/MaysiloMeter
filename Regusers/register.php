@@ -92,7 +92,7 @@ session_start();
                 <div class="form-group">
                 <label>Password</label>
                 <input type="password" id="password" name="password" placeholder="Put a valid password." class="form-control" required oninvalid="this.setCustomValidity('Enter a valid password.')"
-  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onkeyup='check();'>
+  oninput="this.setCustomValidity('')" minlength="6"  onkeyup='check();'>
             </div>
             <div id="message12">
             <b>Password must contain the following:</b>
@@ -105,7 +105,7 @@ session_start();
             <div class="form-group">
                 <label>Confirm Password</label>
                 <input type="password" id="confirm_password" name="confirm_password" placeholder="Repeat password." class="form-control" required oninvalid="this.setCustomValidity('Please make sure your passwords match.')"
-  oninput="this.setCustomValidity('')" minlength="6" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" onkeyup='check();'>
+  oninput="this.setCustomValidity('')" minlength="6"  onkeyup='check();'>
   <br>
   <span id='message13'></span>
             </div>
