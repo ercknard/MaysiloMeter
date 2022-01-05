@@ -7,7 +7,7 @@ $_SESSION["username"] = $_POST["username"] ?: '';
 $_SESSION["password"] = $_POST["password"] ?: '';
 $_SESSION["contact"] = $_POST["contact"] ?: '';
 
-$getUser = $pdo->prepare("SELECT * FROM tblusers WHERE user = ?");
+$getUser = $pdo->prepare("SELECT * FROM tblusers WHERE username = ?");
 $getUser->execute([$_SESSION["username"]]);
 
 if ($getUser->rowCount() > 0) {
