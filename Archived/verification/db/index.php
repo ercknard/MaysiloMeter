@@ -2,10 +2,10 @@
 
 <?php
 
-$host = "localhost";
-$db = "users";
-$username = "root";
-$password = "";
+$host = "us-cdbr-east-04.cleardb.com";
+$db = "heroku_5142987c57081a";
+$username = "b64914f07d5e65";
+$password = "f742c533";
 
 try {
 	$dsn = "mysql:host=$host;dbname=$db;charset=UTF8;";
