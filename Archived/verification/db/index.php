@@ -1,19 +1,21 @@
-
-
 <?php
-
-$host = "us-cdbr-east-04.cleardb.com";
-$db = "heroku_5142987c57081a";
+$servername = "us-cdbr-east-04.cleardb.com";
 $username = "b64914f07d5e65";
 $password = "f742c533";
+$dbname = "heroku_5142987c57081aa";
 
-try {
-	$dsn = "mysql:host=$host;dbname=$db;charset=UTF8;";
-	$pdo = new PDO($dsn, $username, $password, [
-		PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION,
-		PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC
-	]);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-} catch (PDOException $e) {
-	echo $e->getMessage();
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
 }
+echo "Connected successfully";
+
+if($conn->query($sql) === TRUE) {
+  echo "Table successfully updated";
+} else {
+  echo "Error updating table: " . $conn->error;
+}
+?>
