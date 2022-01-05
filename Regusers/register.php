@@ -78,7 +78,7 @@ session_start();
         </div>
     <?php endif ?>
         
-        <form action="sms.php" method="post">
+        <form action="controllers/checkexists.php" method="post">
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="username" placeholder="Your desired name." class="form-control" required oninvalid="this.setCustomValidity('Enter Your Username here')"
