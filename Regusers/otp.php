@@ -12,8 +12,8 @@
         $pass = $_SESSION["password"];
         $contact = $_SESSION["contact"];
         if( $code == $_POST["otp"]){
-            $insertedUser = $pdo->prepare("INSERT INTO tblusers (username, password, contact) VALUES (?, ?, ?)");
-            $insertedUser->execute([$user, md5($pass), $contact]);
+            $insertedUser = $pdo->prepare("INSERT INTO tblusers (user, pass, contact) VALUES (?, ?, ?)");
+            $insertedUser->execute([$user, ($pass), $contact]);
             if ($insertedUser->rowCount() > 0) {
                 // if user is inserted successfully
                 header("Location: ./success.php");
