@@ -27,7 +27,7 @@ if(!isset($_SESSION["userloggedin"]) || $_SESSION["userloggedin"] !== true){
             if ($updateSuccessful) {
                 echo "updated successfully";
                 // if user is inserted successfully
-                // header("Location: ./success.php");
+                header("Location: ./success.php");
             } else {
                 echo "error";
             }
