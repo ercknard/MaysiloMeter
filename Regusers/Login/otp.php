@@ -23,7 +23,7 @@ if(!isset($_SESSION["userloggedin"]) || $_SESSION["userloggedin"] !== true){
             $sql = "UPDATE tblusers SET contact=? WHERE id=?";
             $stmt= $pdo->prepare($sql);
             $stmt->execute([$contact, $id]);
-            if ($insertedUser->rowCount() > 0) {
+            if ($stmt->rowCount() > 0) {
                 // if user is inserted successfully
                 header("Location: success.php");
             }
@@ -49,7 +49,7 @@ if(!isset($_SESSION["userloggedin"]) || $_SESSION["userloggedin"] !== true){
 
 <hr color="lightblue" width="100%">
         <h2>SMS verification</h2>
-        <p>Kindly enter the 6 digit otp code to verify your phone number</p>
+        <p>Kindly enter the 5 digit otp code to verify your phone number</p>
         <form method="POST">
             <div class="form-group">
                 <label role="button" for="otp">Enter OTP sent to your number: </label>
