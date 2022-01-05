@@ -16,7 +16,7 @@
             $insertedUser->execute([$user, md5($pass), $contact]);
             if ($insertedUser->rowCount() > 0) {
                 // if user is inserted successfully
-                header("Location: ./register.php");
+                header("Location: ./success.php");
             }
         }
     }
