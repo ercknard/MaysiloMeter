@@ -11,21 +11,25 @@ if(!isset($_SESSION["userloggedin"]) || $_SESSION["userloggedin"] !== true){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php 
+<?php 
     session_start();
     require_once('./partials/head.php'); 
     require_once('./db/index.php');
 
     if(isset($_POST["otp"])){
         $code = $_SESSION["code"];
+        $user = $_SESSION["username"];
+        $pass = $_SESSION["password"];
         $contact = $_SESSION["contact"];
         if( $code == $_POST["otp"]){
-            $sql = "UPDATE tblusers SET contact=? WHERE id=?";
-            $stmt= $pdo->prepare($sql);
-            $stmt->execute([$contact, $id]);
-            if ($stmt->rowCount() > 0) {
+            $updateUser = $pdo->prepare("UPDATE tblusers SET contact=? WHERE username=?");
+            $updateSuccessful = $updateUser->execute([$contact, $user]);
+            if ($updateSuccessful) {
+                echo "updated successfully";
                 // if user is inserted successfully
-                header("Location: success.php");
+                // header("Location: ./success.php");
+            } else {
+                echo "error";
             }
         }
     }
