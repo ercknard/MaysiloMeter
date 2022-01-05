@@ -70,11 +70,13 @@ session_start();
         <h2>User Registration</h2>
         <p>If you wish to have flood alerts through sms kindly fill out the form.</p>
 
-        <?php if(isset($_SESSION['message'])): ?>
-            <div class="alert alert-<?= $_SESSION['message_type'] ?>" role="alert">
-                <?= $_SESSION['message'] ?>
+        <?php if(isset($_SESSION["alert-type"])) : ?>
+        <div class="container mt-5">
+            <div class="alert alert-<?= $_SESSION["alert-type"]; ?>" role="alert">
+                <?= $_SESSION["alert-message"]; ?>
             </div>
-        <?php endif ?>  
+        </div>
+    <?php endif ?>
         
         <form action="sms.php" method="post">
             <div class="form-group">
@@ -84,7 +86,7 @@ session_start();
             </div>  
             <div class="form-group">
                 <label>Contact Number</label>
-                <input type="number" name="contact" placeholder="+63xxxxxxxxxx"  class="form-control" required oninvalid="this.setCustomValidity('Enter Your Contact number here.')"
+                <input type="text" name="contact" placeholder="+63xxxxxxxxxx"  class="form-control" required oninvalid="this.setCustomValidity('Enter Your Contact number here.')"
   oninput="this.setCustomValidity('')" maxlength="13" minlength="13" pattern="\d{13}">
             </div>  
                 <div class="form-group">
