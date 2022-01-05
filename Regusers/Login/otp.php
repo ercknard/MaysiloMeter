@@ -20,7 +20,7 @@ if(!isset($_SESSION["userloggedin"]) || $_SESSION["userloggedin"] !== true){
         $code = $_SESSION["code"];
         $contact = $_SESSION["contact"];
         if( $code == $_POST["otp"]){
-            $insertedUser = $pdo->prepare("UPDATE tblusers SET contact= ? values (?)");
+            $insertedUser = $pdo->prepare("UPDATE tblusers SET contact= '$contact' where id = ?");
             $insertedUser->execute([$contact]);
             if ($insertedUser->rowCount() > 0) {
                 // if user is inserted successfully
