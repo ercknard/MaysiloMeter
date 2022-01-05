@@ -3,8 +3,8 @@
 <?php
 
 $host = "us-cdbr-east-04.cleardb.com";
-$db = "b64914f07d5e65";
-$username = "heroku_5142987c57081aa";
+$db = "heroku_5142987c57081aa";
+$username = "b64914f07d5e65";
 $password = "f742c533";
 
 try {
