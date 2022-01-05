@@ -38,7 +38,7 @@ require_once "config.php";
 
             <div class="form-group">
                 <label>New contact number</label>
-                <input type="text" name="new_contact" placeholder="+63xxxxxxxxxx"  class="form-control" required oninvalid="this.setCustomValidity('Enter Your Contact number here.')"
+                <input type="text" name="contact" placeholder="+63xxxxxxxxxx"  class="form-control" required oninvalid="this.setCustomValidity('Enter Your Contact number here.')"
   oninput="this.setCustomValidity('')" maxlength="13" minlength="13">
             </div>
             <div class="form-group">

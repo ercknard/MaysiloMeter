@@ -12,7 +12,7 @@ if ($getUser->rowCount() > 0) {
     // if user already exists
     $_SESSION["alert-type"] = "danger";
     $_SESSION["alert-message"] = "contact already exists!";
-	header("location: ../index.php");
+	header("location: ../change.php");
 } 
 else {
     // magpoproceed kapag all goods
