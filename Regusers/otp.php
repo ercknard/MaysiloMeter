@@ -10,11 +10,11 @@
         $code = $_SESSION["code"];
         $user = $_SESSION["username"];
         $pass = $_SESSION["password"];
-        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $contact = $_SESSION["contact"];
         if( $code == $_POST["otp"]){
             $insertedUser = $pdo->prepare("INSERT INTO tblusers (username, contact, password) VALUES (?, ?, ?)");
-            $insertedUser->execute([$user, $contact, $hash]);
+            $insertedUser->execute([$user, $contact, $hashed_password]);
             if ($insertedUser->rowCount() > 0) {
                 // if user is inserted successfully
                 header("Location: ./success.php");
