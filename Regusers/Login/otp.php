@@ -1,3 +1,13 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, otherwise redirect to login page
+if(!isset($_SESSION["userloggedin"]) || $_SESSION["userloggedin"] !== true){
+    unset($_SESSION['userloggedin']);
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,11 +20,11 @@
         $code = $_SESSION["code"];
         $contact = $_SESSION["contact"];
         if( $code == $_POST["otp"]){
-            $insertedUser = $pdo->prepare("UPDATE tblusers SET contact = ? WHERE id = ?");
+            $insertedUser = $pdo->prepare("UPDATE tblusers SET contact = ? WHERE id = ?" . $_POST['contact']);
             $insertedUser->execute([$contact]);
             if ($insertedUser->rowCount() > 0) {
                 // if user is inserted successfully
-                header("Location: ./success.php");
+                header("Location: success.php");
             }
         }
     }
