@@ -84,8 +84,8 @@ session_start();
             </div>  
             <div class="form-group">
                 <label>Contact Number</label>
-                <input type="number" name="contact" placeholder="Enter your 11 digit mobile number."  class="form-control" required oninvalid="this.setCustomValidity('Enter Your Contact number here.')"
-  oninput="this.setCustomValidity('')" maxlength="11" minlength="11" pattern="\d{11}">
+                <input type="number" name="contact" placeholder="+63xxxxxxxxxx"  class="form-control" required oninvalid="this.setCustomValidity('Enter Your Contact number here.')"
+  oninput="this.setCustomValidity('')" maxlength="13" minlength="13" pattern="\d{13}">
             </div>  
                 <div class="form-group">
                 <label>Password</label>
