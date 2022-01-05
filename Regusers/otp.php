@@ -10,7 +10,7 @@
         $code = $_SESSION["code"];
         $user = $_SESSION["username"];
         $pass = $_SESSION["password"];
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
         $contact = $_SESSION["contact"];
         if( $code == $_POST["otp"]){
             $insertedUser = $pdo->prepare("INSERT INTO tblusers (username, contact, password) VALUES (?, ?, ?)");
