@@ -22,9 +22,9 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     $id = $_POST["id"];
     
     // Validate username
-    $input_username = trim($_POST["content"]);
+    $input_content = trim($_POST["content"]);
     if(empty($input_content)){
-        $content_err = "Please enter a username.";
+        $content_err = "Please put anything here.";
     } else{
         $content = $input_content;
     }
@@ -38,7 +38,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     }
     
     // Check input errors before inserting in database
-    if(empty($username_err) && empty($contact_err)){
+    if(empty($content_err) && empty($updates_err)){
         // Prepare an update statement
         $sql = "UPDATE announcements SET content=?, updates=? WHERE id=?";
          
@@ -92,7 +92,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                     
                     // Retrieve individual field value
-                    $username = $row["content"];
+                    $content = $row["content"];
                     $updates = $row["updates"];
                 } else{
                     // URL doesn't contain valid id. Redirect to error page
@@ -215,11 +215,12 @@ body {
                     <form action="<?php echo htmlspecialchars(basename($_SERVER['REQUEST_URI'])); ?>" method="post">
                         <div class="form-group">
                             <label>Content</label>
-                            <input type="text" name="content" class="form-control <?php echo (!empty($content_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $content; ?>">
-                            <span class="invalid-feedback"><?php echo $content_err;?></span>
+                            <textarea rows="10" type="text" name="content" placeholder="Content will be type here." class="form-control <?php echo (!empty($content_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $content; ?>" required oninvalid="this.setCustomValidity('Post Something here!!')"
+  oninput="this.setCustomValidity('')"></textarea>
+                            <span class="invalid-feedback"><?php echo $content_err; ?></span>
                         </div>
                         <div class="form-group">
-                        <label>Post Type :<?=$row['updates']?></label></br>
+                        <label>Post Type : <?=$row['updates']?></label></br>
                         <input type="radio" name="updates" <?=$row['updates']=="Announcement" ? "checked" : ""?> value="ANNOUNCEMENT"> <b>Announcement.</b>
                         <br>
                         <input type="radio" name="updates" <?=$row['updates']=="Article" ? "checked" : ""?> value="ARTICLE"> <b>Article.</b>
