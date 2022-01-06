@@ -40,7 +40,7 @@ $count++;
         echo "0 results";
     }
     
-    if ($total_index == 1) {
+    if ($page == 1) {
         echo "#" . $total_pages . "|";
         echo $cactus . "*";   // 9/3=  3
         }
