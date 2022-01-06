@@ -48,6 +48,7 @@ require_once "config.php";
             </div>
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
+                <a class="btn btn-danger ml-2" href="unregister.php">Unregister User</a>
                 <a class="btn btn-danger ml-2" href="logout.php">Sign out</a>
             </div>
         </form>
