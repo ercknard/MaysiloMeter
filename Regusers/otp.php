@@ -22,7 +22,6 @@
             else{
                 $_SESSION['message_type'] = 'danger';
                 $_SESSION['message'] = 'Incorrect Code. Please try again!';
-                header('location: otp.php');
             }
         }
         }
@@ -47,7 +46,7 @@
 
 <hr color="lightblue" width="100%">
         <h2>SMS verification</h2>
-        <p>Kindly enter the 6 digit otp code to verify your phone number</p>
+        <p>Kindly enter the 5 digit otp code to verify your phone number</p>
 
         <?php if(isset($_SESSION["message_type"])) : ?>
         <div class="container mt-5">
