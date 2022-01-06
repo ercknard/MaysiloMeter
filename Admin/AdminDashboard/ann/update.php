@@ -219,9 +219,10 @@ body {
                             <span class="invalid-feedback"><?php echo $content_err;?></span>
                         </div>
                         <div class="form-group">
-                            <label>Post Type</label>
-                            <input type="text" name="updates" class="form-control <?php echo (!empty($updates_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $updates; ?>">
-                            <span class="invalid-feedback"><?php echo $updates_err;?></span>
+                        <label>Post Type :<?=$row['updates']?></label></br>
+                        <input type="radio" name="updates" <?=$row['updates']=="Announcement" ? "checked" : ""?> value="ANNOUNCEMENT"> <b>Announcement.</b>
+                        <br>
+                        <input type="radio" name="updates" <?=$row['updates']=="Article" ? "checked" : ""?> value="ARTICLE"> <b>Article.</b>
                         </div>
                         <input type="hidden" username="id" value="<?php echo $id; ?>"/>
                         <input type="submit" class="btn btn-primary" value="Submit">
