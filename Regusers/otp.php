@@ -19,9 +19,15 @@
                 // if user is inserted successfully
                 header("Location: ./success.php");
             }
+        }else{
+            $_SESSION['message_type'] = 'danger';
+            $_SESSION['message'] = 'Incorrect Code. Please try again!';
+            header('location: register.php');
+        }
         }
     }
-    ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
