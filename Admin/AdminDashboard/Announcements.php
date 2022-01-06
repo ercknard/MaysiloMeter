@@ -149,7 +149,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
 <hr color="white">
 <a href="Dashboardini.php">User Details</a>
-<a class="highlight" href="Announcements.php">Announcements</a>
+<a class="highlight" href="ann/annLanding.php">Announcements</a>
 <a href="Diagrams.php">Diagrams</a>
 <a href="Tables.php">Tables</a>
 <hr color="white">
