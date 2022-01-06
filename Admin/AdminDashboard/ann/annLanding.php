@@ -1,3 +1,13 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: ../login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +87,7 @@ body {
 <div class="sidenav">
 <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
 <hr color="white">
-<a href="Dashboardini.php">User Details</a>
+<a href="../Dashboardini.php">User Details</a>
 <a class="highlight" href="../Announcements.php">Announcements</a>
 <a href="../Diagrams.php">Diagrams</a>
 <a href="../Tables.php">Tables</a>
