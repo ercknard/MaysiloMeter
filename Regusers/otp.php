@@ -20,7 +20,7 @@
                 header("Location: ./success.php");
             }
             else{
-                    echo 'Incorrect Code. Please try again!';
+                    echo "Incorrect Code. Please try again!";
             }
         }
         }
@@ -46,14 +46,6 @@
 <hr color="lightblue" width="100%">
         <h2>SMS verification</h2>
         <p>Kindly enter the 5 digit otp code to verify your phone number</p>
-
-        <?php if(isset($_SESSION["message_type"])) : ?>
-        <div class="container mt-5">
-            <div class="alert alert-<?= $_SESSION["message_type"]; ?>" role="alert">
-                <?= $_SESSION["message"]; ?>
-            </div>
-        </div>
-    <?php endif ?>
 
         <form method="POST">
             <div class="form-group">
