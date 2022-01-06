@@ -96,7 +96,7 @@ h5 {
 <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
 <hr color="white">
 <a href="Dashboardini.php">User Details</a>
-<a href="Announcements.php">Announcements</a>
+<a href="ann/annLanding.php">Announcements</a>
 <a class="highlight" href="Diagrams.php">Diagrams</a>
 <a href="Tables.php">Tables</a>
 <hr color="white">
