@@ -165,7 +165,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <h4>Admin User : <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>, </h4>
                     <hr color="lightblue" width="100%">
                         <h2 class="pull-left">Announcements      </h2>
-                        <a href="../welcome.php" class="btn btn-primary pull-right ml-2">Back</a>
+                        <a href="ann/annLanding.php" class="btn btn-primary pull-right ml-2">Back</a>
                     </div>
 
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -187,7 +187,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <input type="radio" name="updates" <?=$row['updates']=="Article" ? "checked" : ""?> value="ARTICLE"> <b>Article.</b>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Submit">
-                        <a href="Dashboardini.php" class="btn btn-secondary ml-2">Cancel</a>
+                        <a href="ann/annLanding.php" class="btn btn-secondary ml-2">Cancel</a>
                     </form>      
 
                     </div>
