@@ -14,8 +14,9 @@
 <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
 
 <hr color="lightblue" width="100%">
-                    <h2>Registration Submission Result :</h2>
+                    <h4>Registration Submission Result :</h4>
                     <p>You are now registered !</p>
+                    <br>
                         <a href="register.php" class="btn btn-primary">GO Back</a>
                     </form>
                 </div>

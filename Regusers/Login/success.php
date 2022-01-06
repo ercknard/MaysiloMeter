@@ -24,9 +24,10 @@ if(!isset($_SESSION["userloggedin"]) || $_SESSION["userloggedin"] !== true){
 <img class="img-responsive center-block d-block mx-auto" src="/images/floodlogo.png" width="120px" height="120px">
 
 <hr color="lightblue" width="100%">
-                    <h2>Change number Submission Result :</h2>
-                    <p><b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>,Your request is submitted successfully.</p>
-                    <a class="btn btn-danger" href="logout.php">Sign out</a>
+                    <h4>Change number Submission Result :</h4>
+                    <p><b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>,Your mobile number has been changed successfully.</p>
+                    <br>
+                    <a class="btn btn-secondary" href="change.php">Go Back</a> <a class="btn btn-danger" href="logout.php">Sign out</a>
                     </form>
                 </div>
             </div>        
