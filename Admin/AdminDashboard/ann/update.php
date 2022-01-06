@@ -14,7 +14,7 @@ require_once "../config.php";
  
 // Define variables and initialize with empty values
 $content = $content = "";
-$username_err = $updates_err = "";
+$updates_err = $updates_err = "";
  
 // Processing form data when form is submitted
 if(isset($_POST["id"]) && !empty($_POST["id"])){
@@ -225,7 +225,7 @@ body {
                         <br>
                         <input type="radio" name="updates" <?=$row['updates']=="Article" ? "checked" : ""?> value="ARTICLE"> <b>Article.</b>
                         </div>
-                        <input type="hidden" username="id" value="<?php echo $id; ?>"/>
+                        <input type="hidden" name="id" value="<?php echo $id; ?>"/>
                         <input type="submit" class="btn btn-primary" value="Submit">
                         <a href="annLanding.php" class="btn btn-secondary ml-2">Cancel</a>
                     </form>
