@@ -20,8 +20,7 @@
                 header("Location: ./success.php");
             }
             else{
-                $_SESSION['message_type'] = 'danger';
-                $_SESSION['message'] = 'Incorrect Code. Please try again!';
+                    echo 'Incorrect Code. Please try again!';
             }
         }
         }
