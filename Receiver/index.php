@@ -10,9 +10,6 @@ $user_count = mysqli_fetch_row($result);   // say total count 9
 $total_records = $user_count[0];   //9
 $total_pages = ceil($total_records / $limit);
 
-echo "#" . $total_pages . "|";   // 9/3=  3
-
-
   //set  Number of entries to show in a page.
     // Look for a GET variable page if not found default is 1.        
     if (isset($_GET["page"])) {    
@@ -43,6 +40,13 @@ $count++;
         echo "0 results";
     }
     
-    echo $cactus . "*";
+    if ($total_pages == 1) {
+        echo "#" . $total_pages . "|";
+        echo $cactus . "*";   // 9/3=  3
+        }
+        else {
+            echo $cactus . "*";
+        }
+
         mysqli_close($con);
 ?>
