@@ -45,7 +45,7 @@ $count++;
         echo $cactus . "*";   // 9/3=  3
         }
         else {
-            echo $cactus . "*";
+            echo "#" . $cactus . "*";
         }
 
         mysqli_close($con);
