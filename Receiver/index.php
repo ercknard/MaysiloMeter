@@ -43,6 +43,6 @@ $count++;
         echo "0 results";
     }
     
-    echo "#" . $cactus . "*";
+    echo $cactus . "*";
         mysqli_close($con);
 ?>
