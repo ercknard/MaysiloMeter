@@ -19,13 +19,13 @@
                 // if user is inserted successfully
                 header("Location: ./success.php");
             }
-        }else{
-            $_SESSION['message_type'] = 'danger';
-            $_SESSION['message'] = 'Incorrect Code. Please try again!';
-            header('location: otp.php');
+            else{
+                $_SESSION['message_type'] = 'danger';
+                $_SESSION['message'] = 'Incorrect Code. Please try again!';
+                header('location: otp.php');
+            }
         }
         }
-    }
 
 ?>
 <!DOCTYPE html>
