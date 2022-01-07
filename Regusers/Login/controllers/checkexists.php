@@ -29,7 +29,7 @@ else {
     }else{
         $_SESSION["alert-type"] = "warning";
         $_SESSION["alert-message"] = "Message was't sent!";
-	    header("location: ../index.php");
+	    header("location: ../change.php");
     }
 }
 

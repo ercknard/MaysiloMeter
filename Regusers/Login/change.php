@@ -51,7 +51,9 @@ require_once "config.php";
                 <a class="btn btn-danger ml-2" href="logout.php">Sign out</a>
             </div>
         </form>
-        <input type="submit" action="controllers/checkexists2.php" method="post" class="btn btn-primary" value="Unregister User">
+        <form action="controllers/checkexists2.php" method="post">
+        <input type="submit" class="btn btn-primary" value="Unregister User">
+</form>
     </div>    
 </body>
 </html>
