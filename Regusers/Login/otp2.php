@@ -22,8 +22,8 @@ if(!isset($_SESSION["userloggedin"]) || $_SESSION["userloggedin"] !== true){
         $pass = $_SESSION["password"];
         $contact = $_SESSION["contact"];
         if( $code == $_POST["otp"]){
-            $updateUser = $pdo->prepare("UPDATE tblusers SET contact=? WHERE username=?");
-            $updateSuccessful = $updateUser->execute([$contact, $user]);
+            $updateUser = $pdo->prepare("DELETE from tblusers WHERE username=?");
+            $updateSuccessful = $updateUser->execute([$contact, $user, $pass]);
             if ($updateSuccessful) {
                 echo "updated successfully";
                 // if user is inserted successfully
