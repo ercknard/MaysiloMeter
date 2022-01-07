@@ -10,7 +10,7 @@ if(!isset($_SESSION["userloggedin"]) || $_SESSION["userloggedin"] !== true){
 ?>
 <?php
 // Process delete operation after confirmation
-if(isset($_POST["id"]) && !empty($_POST["id"])){
+if(isset($_POST["id"])){
     // Include config file
     require_once "../config.php";
     
