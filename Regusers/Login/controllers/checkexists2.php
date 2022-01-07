@@ -7,8 +7,7 @@ $_SESSION["contact"] = $_POST["contact"] ?: '';
 
 $getUser = $pdo->prepare("SELECT * FROM tblusers WHERE contact = ?");
 $getUser->execute([$_SESSION["contact"]]);
-
-    // magpoproceed kapag all goods
+ // magpoproceed kapag all goods
     $_SESSION["code"] = getRandomCode(); //instantiating new value in session
 
     // Paste niyo to kapag kelangan niyo ng SMS
