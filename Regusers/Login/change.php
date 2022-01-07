@@ -50,8 +50,6 @@ require_once "config.php";
                 <input type="submit" class="btn btn-primary" value="Submit">
                 <a class="btn btn-danger ml-2" href="logout.php">Sign out</a>
             </div>
-        </form>
-        <a href="unregister.php" class="btn btn-primary" value="Unregister User">un </a>
     </div>    
 </body>
 </html>
