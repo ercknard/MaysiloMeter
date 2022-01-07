@@ -51,7 +51,7 @@ require_once "config.php";
                 <a class="btn btn-danger ml-2" href="logout.php">Sign out</a>
             </div>
         </form>
-        <a href="update.php" class="btn btn-primary" value="Unregister User">un </a>
+        <a href="unregister.php" class="btn btn-primary" value="Unregister User">un </a>
     </div>    
 </body>
 </html>
