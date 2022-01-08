@@ -33,7 +33,7 @@
     <meta property="og:description" content="">
     <meta property="og:type" content="website">
   </head>
-  <body data-home-page="Home.html" data-home-page-title="Home" class="u-body u-stick-footer"><header class="u-clearfix u-grey-10 u-header u-sticky u-header" id="sec-5caa"><div class="u-clearfix u-sheet u-sheet-1">
+  <body class="u-body u-stick-footer"><header class="u-clearfix u-grey-10 u-header u-sticky u-header" id="sec-5caa"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="/Home.html" data-page-id="63320719" class="u-image u-logo u-image-1" data-image-width="309" data-image-height="104" title="home">
           <img src="images/banner.png" class="u-logo-image u-logo-image-1">
         </a>
@@ -204,7 +204,7 @@
             <div class="u-accordion-pane u-container-style u-accordion-pane-2" id="accordion-4aab" aria-labelledby="link-accordion-4aab">
               <div class="u-container-layout u-container-layout-2">
                 <div class="fr-view u-clearfix u-rich-text u-text">
-                  <p>No. Registration is open for anyone who wants to recieve message from the system</p>
+                  <p>Answer. No. Registration is open for anyone who wants to recieve message from the system</p>
                 </div>
               </div>
             </div>
@@ -217,7 +217,7 @@
             <div class="u-accordion-pane u-container-style u-accordion-pane-3" id="accordion-eb1f" aria-labelledby="link-accordion-eb1f">
               <div class="u-container-layout u-container-layout-3">
                 <div class="fr-view u-clearfix u-rich-text u-text">
-                  <p>Answer. You will receive an update about how high the flood is and if it is passable for the vehicle.&nbsp;</p>
+                  <p>Answer. You will receive an update about how high the flood is.&nbsp;</p>
                 </div>
               </div>
             </div>
