@@ -106,7 +106,7 @@ body {
                         <h2 class="pull-left">Tables      </h2>
                         <a href="../welcome.php" class="btn btn-primary pull-right ml-2">Back</a>
                     </div>
-                    <iframe width="100%" height="500px" frameborder="0" src="https://industrial.ubidots.com/app/dashboards/public/widget/EIGS2UEfLeWZQZUCri6sSqHRx0wAdnReN1p7SCnJH5A?embed=true"></iframe>
+                    <iframe width="100%" height="500px" frameborder="0" src="https://industrial.ubidots.com/app/dashboards/public/widget/gXYO-iVyQLnBFBsmAuDCjktcDItASgnV4ItZfaSgKwY?embed=true"></iframe>
                     </div>
                     <div class="form-group">
                         <p> To print records, click view table button to be redirected to another page. Find export PDF button and click. </p>
