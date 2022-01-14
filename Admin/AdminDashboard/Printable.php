@@ -25,7 +25,7 @@
                     <hr color="lightblue" width="100%">
                         <h2 class="pull-left">Table      </h2>
                     </div>
-                    <iframe width="100%" height="550px" frameborder="0" src="https://industrial.ubidots.com/app/dashboards/public/widget/EIGS2UEfLeWZQZUCri6sSqHRx0wAdnReN1p7SCnJH5A?embed=true"></iframe>
+                    <iframe width="100%" height="550px" frameborder="0" src="https://industrial.ubidots.com/app/dashboards/public/widget/gXYO-iVyQLnBFBsmAuDCjktcDItASgnV4ItZfaSgKwY?embed=true"></iframe>
                     </div>
                     <div class="form-group">
                         <br>
