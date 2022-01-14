@@ -117,7 +117,7 @@ h5 {
                     <p align="center">
                     <center>
                     <h5> Meter Dashboard :</h5>
-                    <iframe width="100%" height="500px" frameborder="1px" src="https://industrial.ubidots.com/app/dashboards/public/dashboard/LYT_7riwEZ5-o_Ky8v-fZpi7RWyPmIW_imnQbz0EUR8?nonavbar=true"></iframe>
+                    <iframe width="100%" height="550px" frameborder="0px" src="https://industrial.ubidots.com/app/dashboards/public/dashboard/LYT_7riwEZ5-o_Ky8v-fZpi7RWyPmIW_imnQbz0EUR8?nonavbar=true"></iframe>
                     </center>
                     </p>
                     </div>
