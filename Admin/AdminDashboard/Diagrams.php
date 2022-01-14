@@ -20,7 +20,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         .wrapper{
-            width:90%;
+            width:85%;
             margin-left: 250px;
         }
         table tr td:last-child{
@@ -117,7 +117,7 @@ h5 {
                     <p align="center">
                     <center>
                     <h5> Meter Dashboard :</h5>
-                    <iframe width="100%" height="1000px" frameborder="1px" src="https://industrial.ubidots.com/app/dashboards/public/dashboard/LYT_7riwEZ5-o_Ky8v-fZpi7RWyPmIW_imnQbz0EUR8?nonavbar=true"></iframe>
+                    <iframe width="100%" height="700px" frameborder="1px" src="https://industrial.ubidots.com/app/dashboards/public/dashboard/LYT_7riwEZ5-o_Ky8v-fZpi7RWyPmIW_imnQbz0EUR8?nonavbar=true"></iframe>
                     </center>
                     </p>
                     </div>
