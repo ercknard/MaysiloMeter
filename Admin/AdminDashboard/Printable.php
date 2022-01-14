@@ -8,7 +8,7 @@
         background-color: lightblue;
     }
         .wrapper{
-            width: 950px;
+            width: 1000px;
             margin: auto;
         }
         table tr td:last-child{
