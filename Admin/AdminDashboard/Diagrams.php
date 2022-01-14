@@ -20,7 +20,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         .wrapper{
-            width: 1000px;
+            width:100%;
             margin-left: 250px;
         }
         table tr td:last-child{
